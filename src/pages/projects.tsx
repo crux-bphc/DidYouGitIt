@@ -12,6 +12,28 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({}) => {
 				<div className='col-start-1 col-end-2'>
 					<ProjectCard />
 				</div>
+
+				<div className='col-start-2 col-end-3'>
+					<ProjectCard />
+				</div>
+
+				<div className='col-start-3 col-end-4'>
+					<ProjectCard />
+				</div>
+
+				<div className='col-start-1 col-end-2'>
+					<ProjectCard />
+				</div>
+				<div className='col-start-2 col-end-3'>
+					<ProjectCard />
+				</div>
+				<div className='col-start-3 col-end-4'>
+					<ProjectCard />
+				</div>
+
+				<div className='col-start-1 col-end-2'>
+					<ProjectCard />
+				</div>
 				<div className='col-start-2 col-end-3'>
 					<ProjectCard />
 				</div>

@@ -13,6 +13,13 @@
 	--font-family: 'Poppins', sans-serif;
 }
 
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-blue) var(--color-dark-1);
+
+	@apply scrollbar scrollbar-thin scrollbar-track-dark-1 scrollbar-thumb-blue;
+}
+
 body {
 	color: var(--color-white);
 }
