@@ -13,6 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
 						<h1 className='text-lg text-center'>Logo</h1>
 					</div>
 					<div className='-rotate-90 flex gap-8 items-center mt-48'>
+						<NavLink href='/schedule'>Schedule</NavLink>
 						<NavLink href='/team'>Team</NavLink>
 						<NavLink href='/projects'>Projects</NavLink>
 						<NavLink href='/'>Home</NavLink>
