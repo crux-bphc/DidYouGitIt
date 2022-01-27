@@ -1,8 +1,8 @@
+import { Tab } from '@headlessui/react';
 import { NextPage } from 'next';
 import React from 'react';
-import EventCard from '../components/EventCard';
-import ScheduleCard from '../components/ScheduleCard';
-import TimeBubble from '../components/TimeBubble';
+import ScheduleCard from '../components/Schedule/ScheduleCard';
+import ScheduleItem from '../components/Schedule/ScheduleItem';
 
 const SchedulePage: NextPage = ({}) => {
 	return (
@@ -11,40 +11,83 @@ const SchedulePage: NextPage = ({}) => {
 				Schedule Plan
 			</h1>
 
-			<div className='flex gap-5 justify-center items-center mb-12'>
-				<ScheduleCard />
-				<ScheduleCard />
-				<ScheduleCard />
-				<ScheduleCard />
-			</div>
+			<Tab.Group>
+				<Tab.List
+					defaultValue={1}
+					className='flex gap-5 justify-center items-center mb-12'>
+					<Tab>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={1}
+								date={30}
+								month={'Jan'}
+							/>
+						)}
+					</Tab>
+					<Tab>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={2}
+								date={31}
+								month={'Jan'}
+							/>
+						)}
+					</Tab>
+					<Tab>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={3}
+								date={1}
+								month={'Feb'}
+							/>
+						)}
+					</Tab>
+					<Tab>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={4}
+								date={2}
+								month={'Feb'}
+							/>
+						)}
+					</Tab>
+				</Tab.List>
 
-			<div className='container bg-gray-200 mx-auto w-5/6 h-full'>
-				<div className=' relative wrap overflow-hidden p-10 h-full'>
-					<div
-						className='z-0 border-2-2 absolute border-blue h-full border border-dashed'
-						style={{ left: '50%' }}></div>
+				<Tab.Panels>
+					<div className='container bg-gray-200 mx-auto w-5/6 h-full'>
+						<div className=' relative wrap overflow-hidden p-10 h-full'>
+							<div
+								className='z-0 border-2-2 absolute border-blue h-full border border-dashed'
+								style={{ left: '50%' }}></div>
 
-					<div className=' mb-8 flex justify-between items-center  right-timeline'>
-						<div className='order-1 w-1/3'></div>
-						<div className='z-20  flex items-center order-1'>
-							<TimeBubble />
-						</div>
-						<div className='order-1 w-1/3'>
-							<EventCard />
+							<Tab.Panel>
+								<ScheduleItem />
+								<ScheduleItem orientation='left' />
+								<ScheduleItem />
+							</Tab.Panel>
+
+							<Tab.Panel>
+								<ScheduleItem />
+								<ScheduleItem orientation='left' />
+							</Tab.Panel>
+
+							<Tab.Panel>
+								<ScheduleItem />
+								<ScheduleItem orientation='left' />
+							</Tab.Panel>
+
+							<Tab.Panel>
+								<ScheduleItem />
+								<ScheduleItem orientation='left' />
+							</Tab.Panel>
 						</div>
 					</div>
-
-					<div className=' mb-8 flex justify-between flex-row-reverse items-center  left-timeline'>
-						<div className='order-1 w-1/3'></div>
-						<div className='z-20  flex items-center order-1'>
-							<TimeBubble />
-						</div>
-						<div className='order-1 w-1/3'>
-							<EventCard />
-						</div>
-					</div>
-				</div>
-			</div>
+				</Tab.Panels>
+			</Tab.Group>
 		</>
 	);
 };

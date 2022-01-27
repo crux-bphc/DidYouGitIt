@@ -1,11 +1,10 @@
+import { NextPage } from 'next';
 import React from 'react';
 
-interface TeamPageProps {}
-
-const TeamPage: React.FC<TeamPageProps> = ({}) => {
+const TeamPage: NextPage = ({}) => {
 	return (
 		<>
-			<div>Team Page</div>
+			<h1 className='font-extrabold text-[54px] mb-10 ml-40'>Team</h1>
 		</>
 	);
 };
