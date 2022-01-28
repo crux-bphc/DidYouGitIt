@@ -1,5 +1,3 @@
-const tailwindScrollbar = require('tailwind-scrollbar');
-
 module.exports = {
 	content: ['./src/**/*.{tsx,js,ts,jsx}'],
 	theme: {
@@ -16,5 +14,5 @@ module.exports = {
 			sans: ['var(--font-family)'],
 		},
 	},
-	plugins: [tailwindScrollbar],
+	plugins: [],
 };
