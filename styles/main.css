@@ -16,6 +16,15 @@
 * {
 	scrollbar-width: thin;
 	scrollbar-color: var(--color-blue) var(--color-dark-1);
+	outline: none !important;
+}
+
+.scrollbar-hidden {
+	scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+	display: none;
 }
 
 body {

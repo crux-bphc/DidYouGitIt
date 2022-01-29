@@ -11,11 +11,14 @@ const SchedulePage: NextPage = ({}) => {
 				Schedule Plan
 			</h1>
 
-			<Tab.Group>
+			<Tab.Group as={React.Fragment}>
 				<Tab.List
 					defaultValue={1}
-					className='flex gap-5 justify-center items-center mb-12'>
-					<Tab>
+					className='flex gap-5 w-screen lg:w-[auto] max-w-screen lg:justify-center items-center snap-x snap-proximity mb-10 md:mb-12 overflow-x-scroll scroll-mr-10 scrollbar-hidden'>
+					<div className='snap-center shrink-0'>
+						<div className='snap-0 w-4 sm:w-8'></div>
+					</div>
+					<Tab className='snap-center'>
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -25,7 +28,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab>
+					<Tab className='snap-center'>
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -35,7 +38,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab>
+					<Tab className='snap-center'>
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -45,7 +48,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab>
+					<Tab className='snap-center'>
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -55,15 +58,47 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
+
+					<Tab className='snap-center'>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={5}
+								date={3}
+								month={'Feb'}
+							/>
+						)}
+					</Tab>
+
+					<Tab className='snap-center'>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={6}
+								date={4}
+								month={'Feb'}
+							/>
+						)}
+					</Tab>
+
+					<Tab className='snap-center'>
+						{({ selected }) => (
+							<ScheduleCard
+								selected={selected}
+								day={4}
+								date={5}
+								month={'Feb'}
+							/>
+						)}
+					</Tab>
+					<div className='snap-center shrink-0'>
+						<div className='snap-0 w-4 sm:w-8'></div>
+					</div>
 				</Tab.List>
 
-				<Tab.Panels>
-					<div className='container bg-gray-200 mx-auto w-5/6 h-full'>
-						<div className=' relative wrap overflow-hidden p-10 h-full'>
-							<div
-								className='z-0 border-2-2 absolute border-blue h-full border border-dashed'
-								style={{ left: '50%' }}></div>
-
+				<Tab.Panels as={React.Fragment}>
+					<div className='lg:container bg-gray-200 mx-auto lg:w-5/6 h-full'>
+						<div className='relative wrap overflow-hidden py-10 px-4 lg:p-10 h-full'>
 							<Tab.Panel>
 								<ScheduleItem />
 								<ScheduleItem orientation='left' />

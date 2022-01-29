@@ -10,6 +10,8 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 });
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+	const [show, setShow] = React.useState(false);
+
 	return (
 		<>
 			<AnimatedCursor
@@ -21,13 +23,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				innerScale={0.7}
 				outerScale={5}
 			/>
-			<div className='lg:grid grid-cols-12 min-h-screen'>
-				<div className='col-start-1 col-end-2 bg-dark-1 relative'>
+			{show && (
+				<Sidebar
+					show={show}
+					onClose={() => setShow(false)}
+					className='lg:hidden'
+				/>
+			)}
+			<div className='grid lg:grid-cols-12 min-h-screen'>
+				<div className='hidden lg:block md:col-start-1 md:col-end-2 bg-dark-1 relative'>
 					<Sidebar />
 				</div>
-				<main className='col-start-2 col-end-13 bg-dark-2'>
-					<Header />
-					<div className='p-4'>{children}</div>
+				<main className='lg:col-start-2 lg:col-end-13 bg-dark-2'>
+					<Header onOpen={() => setShow(true)} />
+					<div className='p-0 lg:p-4'>{children}</div>
 				</main>
 			</div>
 		</>

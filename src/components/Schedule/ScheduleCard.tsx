@@ -16,7 +16,7 @@ const ScheduleCard = React.forwardRef<HTMLDivElement, ScheduleCardProps>(
 			<div
 				ref={ref}
 				className={clsx([
-					'group w-[125px] px-4 py-4 rounded-sm',
+					'group h-[130px] md:h-[auto] md:w-[125px] px-4 py-4 rounded-sm w-[40vw] sm:w-[30vw]',
 					'hover:bg-blue transition-all duration-300 ease-out',
 					selected ? 'bg-blue scale-105' : 'bg-dark-1 scale-100',
 				])}>
@@ -30,7 +30,7 @@ const ScheduleCard = React.forwardRef<HTMLDivElement, ScheduleCardProps>(
 						Day {day}
 					</p>
 				</div>
-				<div className='flex gap-4 justify-evenly items-end'>
+				<div className='flex mt-6 md:mt-0 gap-2 md:gap-4 md:justify-evenly items-end'>
 					<p className='text-3xl text-white'>
 						{`${date}`.length === 1 ? `0${date}` : date}
 					</p>

@@ -5,20 +5,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "clsx": "^1.1.1",
+    "framer-motion": "^6.2.3",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-animated-cursor": "^2.2.0",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
     "@types/react": "^17.0.38",
+    "@types/sharp": "^0.29.5",
     "autoprefixer": "^10.4.2",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",

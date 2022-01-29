@@ -14,14 +14,14 @@ const ScheduleItem: React.FC<ScheduleItemProps> = ({
 		<>
 			<div
 				className={clsx([
-					'mb-10 flex justify-between items-center',
-					orientation === 'left' && 'flex-row-reverse',
+					'mb-10 flex lg:justify-between items-center gap-x-6',
+					orientation === 'left' && 'lg:flex-row-reverse',
 				])}>
-				<div className='order-1 w-1/3'></div>
-				<div className='z-20 flex items-center order-1'>
+				<div className='order-1 lg:w-1/3 hidden md:block'></div>
+				<div className='z-20 hidden md:flex  lg:w-1/3 justify-center items-center order-1'>
 					<TimeBubble startTime='09:00 AM' endTime='10:00 AM' />
 				</div>
-				<div className='order-1 w-1/3'>
+				<div className='order-1 lg:w-1/3'>
 					<EventCard />
 				</div>
 			</div>
