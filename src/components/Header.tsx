@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 					<HiMenuAlt1 onClick={onOpen} size={25} />
 					<p>LOGO</p>
 				</div>
-				<Button href='/'>Register</Button>
+				<Button href='https://forms.gle/qGXawKSGnFVdTqSW8'>Register</Button>
 			</div>
 		</>
 	);
