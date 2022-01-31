@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 					</div>
 					<div
 						className={clsx([
-							'flex-col-reverse lg:flex-row lg:-rotate-90 flex gap-8 lg:items-center mt-20 lg:mt-64',
+							'flex-col-reverse lg:flex-row lg:-rotate-90 flex gap-6 lg:items-center mt-20 lg:mt-64',
 						])}>
 						<NavLink onClick={onClose} href='/team'>
 							Team
@@ -38,12 +38,15 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 						<NavLink onClick={onClose} href='/projects'>
 							Projects
 						</NavLink>
+						<NavLink onClick={onClose} href='/aboutUs'>
+							About Us
+						</NavLink>
 						<NavLink onClick={onClose} href='/'>
 							Home
 						</NavLink>
 					</div>
 				</div>
-				<div className='flex flex-col lg:items-center gap-8 pb-5'>
+				<div className='flex flex-col lg:items-center gap-6 pb-5'>
 					<a href='#'>
 						<FiTwitter size={26} />
 					</a>
