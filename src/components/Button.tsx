@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
 
@@ -6,17 +7,35 @@ const sizes = {
 	sm: 'py-2 px-3 md:py-2 md:px-4 text-sm font-medium',
 };
 
+const variants = {
+	blue: 'bg-blue text-white border-blue',
+	white: 'bg-transparent text-white border-white',
+};
+
 interface ButtonProps {
 	href: string;
 	size?: keyof typeof sizes;
+	variant?: keyof typeof variants;
+	className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, children, size = 'md' }) => {
+const Button: React.FC<ButtonProps> = ({
+	href,
+	children,
+	size = 'md',
+	variant = 'blue',
+	className,
+}) => {
 	return (
 		<>
 			<Link href={href} passHref>
 				<button
-					className={`${sizes[size]} bg-blue text-white rounded-sm hover:opacity-80 transition-all duration-300 ease-out`}>
+					className={clsx([
+						'rounded-sm border-2 hover:opacity-80 transition-all duration-300 ease-out',
+						sizes[size],
+						variants[variant],
+						className,
+					])}>
 					{children}
 				</button>
 			</Link>

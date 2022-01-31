@@ -14,7 +14,14 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 					<HiMenuAlt1 onClick={onOpen} size={25} />
 					<p>LOGO</p>
 				</div>
-				<Button href='https://forms.gle/qGXawKSGnFVdTqSW8'>Register</Button>
+				<div className='flex items-center gap-x-3'>
+					<Button variant='white' className='hidden md:block' href='/schedule'>
+						Schedule
+					</Button>
+					<Button href='https://forms.gle/qGXawKSGnFVdTqSW8'>
+						Register Now
+					</Button>
+				</div>
 			</div>
 		</>
 	);

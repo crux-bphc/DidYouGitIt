@@ -14,5 +14,5 @@ module.exports = {
 			sans: ['var(--font-family)'],
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 };

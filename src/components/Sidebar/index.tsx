@@ -29,16 +29,22 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 						className={clsx([
 							'flex-col-reverse lg:flex-row lg:-rotate-90 flex gap-6 lg:items-center mt-20 lg:mt-64',
 						])}>
+						<NavLink onClick={onClose} href='/faqs'>
+							FAQ's
+						</NavLink>
 						<NavLink onClick={onClose} href='/team'>
 							Team
 						</NavLink>
-						<NavLink onClick={onClose} href='/schedule'>
+						<NavLink
+							className='block lg:hidden'
+							onClick={onClose}
+							href='/schedule'>
 							Schedule
 						</NavLink>
 						<NavLink onClick={onClose} href='/projects'>
 							Projects
 						</NavLink>
-						<NavLink onClick={onClose} href='/aboutUs'>
+						<NavLink onClick={onClose} href='/about-us'>
 							About Us
 						</NavLink>
 						<NavLink onClick={onClose} href='/'>
