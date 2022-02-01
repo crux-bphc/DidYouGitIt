@@ -5,3 +5,9 @@ export type Project = {
 	link: string;
 	logo: string;
 };
+
+export type Workflow = {
+    title: string;
+    desc: string;
+    orientation?: 'left' | 'right';
+}

@@ -18,12 +18,12 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 				<div className='flex items-center gap-x-3'>
 					<div className='flex items-center gap-x-3'>
 						<a
-							className='md:hidden bg-blue hover:bg-blue focus:bg-blue rounded-full flex justify-center p-3 transition-all duration-300 ease-out'
+							className='md:hidden bg-blue hover:bg-blue focus:bg-blue flex justify-center p-2 transition-all duration-300 ease-out'
 							href='#'
 							target={'_blank'}>
 							<FaDiscord size={20} />
 						</a>
-						<Button isExternal className='hidden md:block' href='#'>
+						<Button variant='white' isExternal className='hidden md:block' href='#'>
 							Join Discord
 						</Button>
 					</div>
