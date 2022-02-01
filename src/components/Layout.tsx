@@ -14,15 +14,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 	return (
 		<>
-			<AnimatedCursor
-				// @ts-ignore
-				innerSize={20}
-				outerSize={20}
-				color='255, 255, 255'
-				outerAlpha={0.2}
-				innerScale={0.7}
-				outerScale={5}
-			/>
+			{process.env.NODE_ENV === 'production' && (
+				<AnimatedCursor
+					// @ts-ignore
+					innerSize={20}
+					outerSize={20}
+					color='255, 255, 255'
+					outerAlpha={0.2}
+					innerScale={0.7}
+					outerScale={5}
+				/>
+			)}
 			{show && (
 				<Sidebar
 					show={show}

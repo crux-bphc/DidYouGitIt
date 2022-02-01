@@ -16,6 +16,7 @@ interface ButtonProps {
 	href: string;
 	size?: keyof typeof sizes;
 	variant?: keyof typeof variants;
+	isExternal?: boolean;
 	className?: string;
 }
 
@@ -24,12 +25,16 @@ const Button: React.FC<ButtonProps> = ({
 	children,
 	size = 'md',
 	variant = 'blue',
+	isExternal = false,
 	className,
 }) => {
+	const Component = isExternal ? 'a' : 'button';
+
 	return (
 		<>
 			<Link href={href} passHref>
-				<button
+				<Component
+					target={isExternal ? '_blank' : undefined}
 					className={clsx([
 						'rounded-sm border-2 hover:opacity-80 transition-all duration-300 ease-out',
 						sizes[size],
@@ -37,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
 						className,
 					])}>
 					{children}
-				</button>
+				</Component>
 			</Link>
 		</>
 	);

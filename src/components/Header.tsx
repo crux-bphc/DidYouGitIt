@@ -19,18 +19,19 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 					<div className='flex items-center gap-x-3'>
 						<a
 							className='md:hidden bg-blue hover:bg-blue focus:bg-blue rounded-full flex justify-center p-3 transition-all duration-300 ease-out'
-							href='#'>
+							href='#'
+							target={'_blank'}>
 							<FaDiscord size={20} />
 						</a>
-						<Button className='hidden md:block' href='#'>
+						<Button isExternal className='hidden md:block' href='#'>
 							Join Discord
 						</Button>
 					</div>
-					
+
 					<Button variant='white' className='hidden md:block' href='/schedule'>
 						Schedule
 					</Button>
-					<Button href='https://forms.gle/qGXawKSGnFVdTqSW8'>
+					<Button isExternal href='https://forms.gle/qGXawKSGnFVdTqSW8'>
 						Register Now
 					</Button>
 				</div>
