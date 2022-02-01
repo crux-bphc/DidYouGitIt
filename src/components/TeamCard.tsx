@@ -6,9 +6,10 @@ interface TeamCardProps {
 	coverPic: string;
 	name: string;
 	subtitle: string;
+	github: string;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ coverPic, name, subtitle }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ coverPic, name, subtitle, github }) => {
 	return (
 		<>
 			<div className='py-6 transition-all duration-300 ease-out'>
@@ -33,7 +34,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ coverPic, name, subtitle }) => {
 					</a>
 					<a
 						className='bg-dark-1 hover:bg-blue focus:bg-blue rounded-full flex justify-center p-2 transition-all duration-300 ease-out'
-						href='#'>
+						href={github}>
 						<FiGithub size={20} />
 					</a>
 				</div>

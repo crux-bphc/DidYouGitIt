@@ -1,12 +1,18 @@
 import React from 'react';
 import Button from './Button';
 
-interface ProjectCardProps {}
+interface ProjectCardProps {
+	// clubLogo: string;
+	title: string;
+	domain: string;
+	desc: string;
+	link: string;
+}
 
-const ProjectCard: React.FC<ProjectCardProps> = ({}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({title, domain, desc, link}) => {
 	return (
 		<>
-			<div className='border-[1px] border-gray p-6 hover:border-white hover:shadow-md hover:shadow-white transition-all duration-300 ease-out'>
+			<div className='border-[1px] border-gray p-6 hover:border-white hover:shadow-md hover:shadow-white transition-all duration-300 ease-out mb-10'>
 				<div className='flex items-center justify-between mb-20'>
 					<p className='text-lg'>01</p>
 					<div>
@@ -16,16 +22,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({}) => {
 				</div>
 				<div>
 					<h5 className='uppercase font-medium text-3xl mb-3 max-w-[78%]'>
-						Project Name / Repo Name
+						{title}
 					</h5>
-					<h6 className='uppercase text-blue mb-10'>Android</h6>
+					<h6 className='uppercase text-blue mb-10'>{domain}</h6>
 					<p className='text-sm text-gray pb-5 lh-15 mb-5'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-						sit amet augue diam. Aliquam tincidunt nisl vitae lobortis
-						convallis. Nullam sollicitudin diam vitae sapien tincidunt varius
+						{desc}
 					</p>
 					<div className='text-right'>
-						<Button size='sm' href='/'>
+						<Button size='sm' href={link}>
 							View
 						</Button>
 					</div>
