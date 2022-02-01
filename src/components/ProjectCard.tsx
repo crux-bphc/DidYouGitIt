@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { Project } from '../types';
 import Button from './Button';
@@ -16,8 +17,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						{`${index}`.length === 1 ? `0${index + 1}` : index + 1}
 					</p>
 					<div>
-						Club <br />
-						Logo
+						{/* <Image
+							src={project.logo}
+							height={60}
+							width={60}
+							alt={project.title}
+						/> */}
+						CLUB <br />
+						LOGO
 					</div>
 				</div>
 				<div className='flex-1 flex flex-col justify-between'>

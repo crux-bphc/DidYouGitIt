@@ -17,8 +17,8 @@ Yes, the event is open to students of all levels of programming and open-source 
 
 ## Do I need a team to participate?
 
-Answer
+No. Absolutely not. The event is for individual participants. You are happy to collaborate and seek help from anyone, however your pull requests will be judged individually
 
 ## Who is organising the event?
 
-The event is being jointly conducted by the ACM chapter in BITS Pilani, Hyderabad Campus along with other involved clubs (DevSoc Goa, ACM Pilani?)
+The event is being jointly organized by cruX BPHC, ACM BPHC and DevSoc Goa. Projects are also contributed by SWD BPHC, SmartCampus BPHC and aeroD BPGC

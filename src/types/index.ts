@@ -3,4 +3,5 @@ export type Project = {
 	domain: string;
 	description: string;
 	link: string;
+	logo: string;
 };
