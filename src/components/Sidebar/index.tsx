@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 						<NavLink onClick={onClose} href='/projects'>
 							Projects
 						</NavLink>
-						<NavLink onClick={onClose} href='/about-us'>
+						<NavLink onClick={onClose} href='/about'>
 							About Us
 						</NavLink>
 						<NavLink onClick={onClose} href='/'>
