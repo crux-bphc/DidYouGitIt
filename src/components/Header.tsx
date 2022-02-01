@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import { FaDiscord } from 'react-icons/fa';
 
 interface HeaderProps {
 	onOpen?: () => void;
@@ -15,6 +16,17 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 					<p>LOGO</p>
 				</div>
 				<div className='flex items-center gap-x-3'>
+					<div className='flex items-center gap-x-3'>
+						<a
+							className='md:hidden bg-blue hover:bg-blue focus:bg-blue rounded-full flex justify-center p-3 transition-all duration-300 ease-out'
+							href='#'>
+							<FaDiscord size={20} />
+						</a>
+						<Button className='hidden md:block' href='#'>
+							Join Discord
+						</Button>
+					</div>
+					
 					<Button variant='white' className='hidden md:block' href='/schedule'>
 						Schedule
 					</Button>
