@@ -43,11 +43,14 @@ const WorkflowPage:  React.FC<WorkflowPageProps> = ({ workflow }) => {
 					step.orientation = i % 2 === 0 ? 'left' : 'right';
 
 					return (
-						<div key={step.title}>
+						<div key={step.title} className={clsx([
+							'grid', i % 2 === 0 ? 'justify-items-start' : 'justify-items-end'
+						])}>
 							<WorkflowCard 
                                 title={step.title}
                                 desc={step.desc}
-                                orientation={step.orientation}/>
+                                orientation={step.orientation}
+							/>
 						</div>
 					);
 				})}

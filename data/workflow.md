@@ -1,18 +1,17 @@
 ---
 workflow: [
 		{
-			title: 'Claim Issue',
-			desc: "It doesn't matter whether you know how to solve it. Don't look out for issues you know how to solve, but rather to the once you don't know how to solve! This will be your opening door to learning something new.",
+			title: 'Register',
+			desc: "Drop by and fill out your application for the event so as to not miss out on the chance of seeing your name on the leaderboard!",
 		},{
-			title: 'Solve Issue',
-			desc: "After claiming the issue, now it's the time to explore ways on how to proceed. Mentors and Google will be to your rescue here. Take advantage of both to the most.",
+			title: 'Claim an Issue',
+			desc: "Hop over to your favorite repository and head over to the issues. Claim an issue when you are ready to work on it. Please be careful that you do not just claim an issue that you do not plan to work on immediately after you claim it. ",
 		},{
-			title: 'Open a Pull Request',
-			desc: "After reading everything on internet ever written and those to be written in future, it's the time to open your pr. 
-            This will be the golden moment, where you will discover another 100 ways git could make you cry!",
+			title: 'Solve the issue',
+			desc: "Time to get your dev-brains working around to solve the issue! Stuck and don't know how to proceed at all? Ping the respective repository mentors!",
 		},{
-			title: 'Climb the Leaderboard',
-			desc: "After spending another sleepless night to see your pr getting merged it's the time to climb up the leaderboard and enjoy that shortliving 'I love Programming' feeling!",
+			title: 'Submit PR',
+			desc: "Waste no time and sprint ahead to submit the pull request once you have polished your work enough! Repository owners will soon be reviewing your work and deciding its fate. You can go ahead to claim another issue ONLY if your previous claimed issue was accepted and dusted for good.",
 		},
 
 	]
