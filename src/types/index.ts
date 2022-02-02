@@ -10,4 +10,5 @@ export type Workflow = {
     title: string;
     desc: string;
     orientation?: 'left' | 'right';
+	icon: string;
 }

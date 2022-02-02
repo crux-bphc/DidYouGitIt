@@ -50,6 +50,7 @@ const WorkflowPage:  React.FC<WorkflowPageProps> = ({ workflow }) => {
                                 title={step.title}
                                 desc={step.desc}
                                 orientation={step.orientation}
+								icon={step.icon}
 							/>
 						</div>
 					);
