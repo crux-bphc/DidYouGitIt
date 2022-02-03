@@ -2,6 +2,15 @@ import React from 'react';
 import NavLink from './NavLink';
 import { FiTwitter, FiFacebook } from 'react-icons/fi';
 import clsx from 'clsx';
+import {
+	HiOutlineHome,
+	HiOutlineInformationCircle,
+	HiOutlineViewGrid,
+	HiOutlineQuestionMarkCircle,
+} from 'react-icons/hi';
+import { TiFlowMerge } from 'react-icons/ti';
+import { AiOutlineSchedule, AiOutlineTeam } from 'react-icons/ai';
+import Divider from '../Divider';
 
 interface SidebarProps {
 	className?: string;
@@ -25,34 +34,63 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 					<div>
 						<h1 className='text-lg lg:text-center'>Logo</h1>
 					</div>
-					<div
-						className={clsx([
-							'flex-col-reverse lg:flex-row lg:-rotate-90 flex gap-6 lg:items-center mt-20 lg:mt-64',
-						])}>
-						<NavLink onClick={onClose} href='/faqs'>
-							FAQ's
-						</NavLink>
-						<NavLink onClick={onClose} href='/team'>
-							Team
-						</NavLink>
+					<div className={clsx(['flex-col flex gap-6 mt-20'])}>
 						<NavLink
+							icon={<HiOutlineHome size={24} />}
+							onClick={onClose}
+							href='/'>
+							Home
+						</NavLink>
+
+						<NavLink
+							icon={<HiOutlineInformationCircle size={24} />}
+							onClick={onClose}
+							href='/about'>
+							About
+						</NavLink>
+
+						<Divider />
+
+						<NavLink
+							icon={<TiFlowMerge size={24} />}
+							onClick={onClose}
+							href='/workflow'>
+							Workflow
+						</NavLink>
+
+						<NavLink
+							icon={<HiOutlineViewGrid size={24} />}
+							onClick={onClose}
+							href='/projects'>
+							Projects
+						</NavLink>
+
+						<Divider />
+
+						<NavLink
+							icon={<AiOutlineSchedule size={24} />}
 							className='block lg:hidden'
 							onClick={onClose}
 							href='/schedule'>
 							Schedule
 						</NavLink>
-						<NavLink onClick={onClose} href='/projects'>
-							Projects
+
+						<NavLink
+							icon={<AiOutlineTeam size={24} />}
+							onClick={onClose}
+							href='/team'>
+							Team
 						</NavLink>
-						<NavLink onClick={onClose} href='/about'>
-							About Us
-						</NavLink>
-						<NavLink onClick={onClose} href='/'>
-							Home
+
+						<NavLink
+							icon={<HiOutlineQuestionMarkCircle size={24} />}
+							onClick={onClose}
+							href='/faqs'>
+							FAQ's
 						</NavLink>
 					</div>
 				</div>
-				<div className='flex flex-col lg:items-center gap-6 pb-5'>
+				<div className='flex lg:items-center gap-6 pb-5'>
 					<a href='#'>
 						<FiTwitter size={26} />
 					</a>

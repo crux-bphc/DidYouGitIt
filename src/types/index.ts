@@ -7,8 +7,15 @@ export type Project = {
 };
 
 export type Workflow = {
-    title: string;
-    desc: string;
-    orientation?: 'left' | 'right';
+	title: string;
+	desc: string;
+	orientation?: 'left' | 'right';
 	icon: string;
-}
+};
+
+export type Team = {
+	name: string;
+	subtitle: string;
+	coverPic: string;
+	github: string;
+};

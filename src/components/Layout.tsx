@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import dynamic from 'next/dynamic';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 interface LayoutProps {}
 
@@ -10,6 +12,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 });
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+	const router = useRouter();
 	const [show, setShow] = React.useState(false);
 
 	return (
@@ -38,7 +41,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				</div>
 				<main className='lg:col-start-2 lg:col-end-13 bg-dark-2'>
 					<Header onOpen={() => setShow(true)} />
-					<div className='p-0 lg:p-4'>{children}</div>
+					<AnimatePresence exitBeforeEnter>
+						<motion.div
+							key={router.route}
+							initial={{ opacity: 0, y: -20 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -20 }}
+							transition={{ duration: 0.65 }}
+							className='p-0 lg:p-4'>
+							{children}
+						</motion.div>
+					</AnimatePresence>
 				</main>
 			</div>
 		</>

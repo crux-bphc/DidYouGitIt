@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { FiTwitter, FiFacebook, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { Team } from '../types';
 
 interface TeamCardProps {
-	coverPic: string;
-	name: string;
-	subtitle: string;
-	github: string;
+	team: Team;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ coverPic, name, subtitle, github }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
+	const { coverPic, name, subtitle, github } = team;
+
 	return (
 		<>
 			<div className='py-6 transition-all duration-300 ease-out'>

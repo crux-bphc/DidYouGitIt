@@ -7,6 +7,7 @@ interface NavLinkProps {
 	href: string;
 	onClick?: () => void;
 	className?: string;
+	icon: React.ReactElement;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
@@ -14,6 +15,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 	href,
 	onClick,
 	className,
+	icon,
 }) => {
 	const router = useRouter();
 	return (
@@ -23,10 +25,11 @@ const NavLink: React.FC<NavLinkProps> = ({
 					onClick={onClick}
 					className={clsx([
 						router.pathname === href && 'text-blue',
-						'w-max',
+						'w-max flex items-center gap-x-4',
 						className,
 					])}>
-					{children}
+					<span>{icon}</span>
+					<span>{children}</span>
 				</a>
 			</Link>
 		</>
