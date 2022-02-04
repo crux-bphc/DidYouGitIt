@@ -5,7 +5,7 @@ interface DividerProps {}
 const Divider: React.FC<DividerProps> = ({}) => {
 	return (
 		<>
-			<hr className='bg-gray opacity-20' />
+			<hr className="bg-gray opacity-20" />
 		</>
 	);
 };

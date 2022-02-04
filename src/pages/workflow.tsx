@@ -31,11 +31,12 @@ interface WorkflowPageProps {
 const WorkflowPage: React.FC<WorkflowPageProps> = ({ workflow }) => {
 	return (
 		<>
-			<div className='lg:pl-36 md:px-10 mt-10 lg:mt-0 p-4'>
-				<div className='max-w-full md:max-w-5xl'>
+			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
+				<div className="max-w-full md:max-w-5xl">
 					<h1
 						style={{ lineHeight: 1.1 }}
-						className='text-3xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-10 md:mb-4 lg:mb-8'>
+						className="mb-10 text-3xl font-bold sm:text-5xl md:mb-4 md:text-[50px] lg:mb-8 lg:text-[60px] xl:text-[80px]"
+					>
 						Workflow
 					</h1>
 
@@ -48,7 +49,8 @@ const WorkflowPage: React.FC<WorkflowPageProps> = ({ workflow }) => {
 								className={clsx([
 									'grid',
 									i % 2 === 0 ? 'justify-items-start' : 'justify-items-end',
-								])}>
+								])}
+							>
 								<WorkflowCard
 									title={step.title}
 									desc={step.desc}

@@ -6,15 +6,15 @@ import CountdownCard from '../components/CountdownCard';
 const HomePage: NextPage = ({}) => {
 	return (
 		<>
-			<div className='lg:pl-36 md:px-10 mt-10 lg:mt-0 p-4'>
-				<div className='flex gap-2 md:gap-5 justify-start items-center'>
+			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
+				<div className="flex items-center justify-start gap-2 md:gap-5">
 					<CountdownCard />
 					<CountdownCard />
 					<CountdownCard />
 					<CountdownCard />
 				</div>
-				<div className='max-w-full md:max-w-5xl prose prose-invert prose-p:text-gray'>
-					<h1 className='mt-8 text-4xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-3 lg:mb-7'>
+				<div className="prose prose-invert max-w-full prose-p:text-gray md:max-w-5xl">
+					<h1 className="mt-8 mb-3 text-4xl font-bold sm:text-5xl md:text-[50px] lg:mb-7 lg:text-[60px] xl:text-[80px]">
 						Did You Git It?
 					</h1>
 
@@ -32,8 +32,8 @@ const HomePage: NextPage = ({}) => {
 						Tune into XYZ-link on ABC-date for the event. Let's improve the
 						development culture together, shall we?
 					</p>
-					<div className='my-10'>
-						<Button href='/workflow'>Learn More</Button>
+					<div className="my-10">
+						<Button href="/workflow">Learn More</Button>
 					</div>
 				</div>
 			</div>

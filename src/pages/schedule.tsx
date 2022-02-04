@@ -7,18 +7,19 @@ import ScheduleItem from '../components/Schedule/ScheduleItem';
 const SchedulePage: NextPage = ({}) => {
 	return (
 		<>
-			<h1 className='text-center font-extrabold text-[40px]  mb-10'>
+			<h1 className="mb-10 text-center text-[40px]  font-extrabold">
 				Schedule Plan
 			</h1>
 
 			<Tab.Group as={React.Fragment}>
 				<Tab.List
 					defaultValue={1}
-					className='flex gap-5 w-screen lg:w-[auto] max-w-screen lg:justify-center items-center snap-x snap-proximity mb-10 md:mb-12 overflow-x-scroll scroll-mr-10 scrollbar-hidden'>
-					<div className='snap-center shrink-0'>
-						<div className='snap-0 w-4 sm:w-8'></div>
+					className="max-w-screen scrollbar-hidden mb-10 flex w-screen snap-x snap-proximity scroll-mr-10 items-center gap-5 overflow-x-scroll md:mb-12 lg:w-[auto] lg:justify-center"
+				>
+					<div className="shrink-0 snap-center">
+						<div className="snap-0 w-4 sm:w-8"></div>
 					</div>
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -28,7 +29,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -38,7 +39,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -48,7 +49,7 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -59,7 +60,7 @@ const SchedulePage: NextPage = ({}) => {
 						)}
 					</Tab>
 
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -70,7 +71,7 @@ const SchedulePage: NextPage = ({}) => {
 						)}
 					</Tab>
 
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -81,7 +82,7 @@ const SchedulePage: NextPage = ({}) => {
 						)}
 					</Tab>
 
-					<Tab className='snap-center'>
+					<Tab className="snap-center">
 						{({ selected }) => (
 							<ScheduleCard
 								selected={selected}
@@ -91,33 +92,33 @@ const SchedulePage: NextPage = ({}) => {
 							/>
 						)}
 					</Tab>
-					<div className='snap-center shrink-0'>
-						<div className='snap-0 w-4 sm:w-8'></div>
+					<div className="shrink-0 snap-center">
+						<div className="snap-0 w-4 sm:w-8"></div>
 					</div>
 				</Tab.List>
 
 				<Tab.Panels as={React.Fragment}>
-					<div className='lg:container bg-gray-200 mx-auto lg:w-5/6 h-full'>
-						<div className='relative wrap overflow-hidden py-10 px-4 lg:p-10 h-full'>
+					<div className="bg-gray-200 mx-auto h-full lg:container lg:w-5/6">
+						<div className="wrap relative h-full overflow-hidden py-10 px-4 lg:p-10">
 							<Tab.Panel>
 								<ScheduleItem />
-								<ScheduleItem orientation='left' />
+								<ScheduleItem orientation="left" />
 								<ScheduleItem />
 							</Tab.Panel>
 
 							<Tab.Panel>
 								<ScheduleItem />
-								<ScheduleItem orientation='left' />
+								<ScheduleItem orientation="left" />
 							</Tab.Panel>
 
 							<Tab.Panel>
 								<ScheduleItem />
-								<ScheduleItem orientation='left' />
+								<ScheduleItem orientation="left" />
 							</Tab.Panel>
 
 							<Tab.Panel>
 								<ScheduleItem />
-								<ScheduleItem orientation='left' />
+								<ScheduleItem orientation="left" />
 							</Tab.Panel>
 						</div>
 					</div>

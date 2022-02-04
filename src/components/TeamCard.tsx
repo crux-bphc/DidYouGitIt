@@ -12,35 +12,39 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
 
 	return (
 		<>
-			<div className='py-6 transition-all duration-300 ease-out'>
-				<div className='mb-5 flex justify-center items-center'>
+			<div className="py-6 transition-all duration-300 ease-out">
+				<div className="mb-5 flex items-center justify-center">
 					<Image src={coverPic} alt={name} height={319} width={342} />
 				</div>
-				<div className='flex items-center justify-center gap-1 mb-4'>
+				<div className="mb-4 flex items-center justify-center gap-1">
 					<a
-						className='bg-dark-1 hover:bg-blue focus:bg-blue rounded-full flex justify-center p-2 transition-all duration-300 ease-out'
-						href='#'>
+						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+						href="#"
+					>
 						<FiFacebook size={20} />
 					</a>
 					<a
-						className='bg-dark-1 hover:bg-blue focus:bg-blue rounded-full flex justify-center p-2 transition-all duration-300 ease-out'
-						href='#'>
+						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+						href="#"
+					>
 						<FiTwitter size={20} />
 					</a>
 					<a
-						className='bg-dark-1 hover:bg-blue focus:bg-blue rounded-full flex justify-center p-2 transition-all duration-300 ease-out'
-						href='#'>
+						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+						href="#"
+					>
 						<FiLinkedin size={20} />
 					</a>
 					<a
-						className='bg-dark-1 hover:bg-blue focus:bg-blue rounded-full flex justify-center p-2 transition-all duration-300 ease-out'
-						href={github}>
+						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+						href={github}
+					>
 						<FiGithub size={20} />
 					</a>
 				</div>
-				<div className='text-center'>
-					<h1 className='font-medium text-3xl mb-1'>{name}</h1>
-					<h6 className='font-extralight text-gray text-md'>{subtitle}</h6>
+				<div className="text-center">
+					<h1 className="mb-1 text-3xl font-medium">{name}</h1>
+					<h6 className="text-md font-extralight text-gray">{subtitle}</h6>
 				</div>
 			</div>
 		</>

@@ -11,7 +11,8 @@ const Backdrop: React.FC<BackdropProps> = ({ onClose, ...props }) => {
 			<motion.div
 				{...props}
 				onClick={() => onClose()}
-				className='fixed z-20 bg-dark-1 opacity-70 grid place-items-center h-full w-full lg:hidden'></motion.div>
+				className="fixed z-20 grid h-full w-full place-items-center bg-dark-1 opacity-70 lg:hidden"
+			></motion.div>
 		</>
 	);
 };

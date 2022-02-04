@@ -44,11 +44,12 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 		<>
 			<div
 				className={clsx(
-					'mx-auto gap-5 grid grid-cols-1 md:grid-cols-2 lg:pb-6 p-4',
-					showFilters ? 'lg:grid-cols-3 max-w-6xl' : 'lg:grid-cols-3 max-w-6xl'
-				)}>
-				<div className='md:mb-10 col-start-[1] col-end-[-1] flex justify-between items-center'>
-					<h1 className='text-4xl flex-1 md:text-[54px] font-extrabold'>
+					'mx-auto grid grid-cols-1 gap-5 p-4 md:grid-cols-2 lg:pb-6',
+					showFilters ? 'max-w-6xl lg:grid-cols-3' : 'max-w-6xl lg:grid-cols-3'
+				)}
+			>
+				<div className="col-start-[1] col-end-[-1] flex items-center justify-between md:mb-10">
+					<h1 className="flex-1 text-4xl font-extrabold md:text-[54px]">
 						Projects
 					</h1>
 					<motion.button
@@ -56,15 +57,17 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 							scale: 1,
 						}}
 						onClick={() => setShowFilters(!showFilters)}
-						className='flex items-center gap-x-3 group-hover:transition-all duration-300 ease-out hover:text-blue'>
+						className="flex items-center gap-x-3 duration-300 ease-out hover:text-blue group-hover:transition-all"
+					>
 						<span>
 							{showFilters ? <HiX size={20} /> : <HiFilter size={20} />}
 						</span>
 						<span
 							className={clsx(
 								'text-xl uppercase',
-								showFilters && 'text-center block'
-							)}>
+								showFilters && 'block text-center'
+							)}
+						>
 							Filters
 						</span>
 					</motion.button>
@@ -84,7 +87,8 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 								mdColumn.start,
 								mdColumn.end,
 								'col-start-1 col-end-2',
-							])}>
+							])}
+						>
 							<ProjectCard
 								key={`${project.title}-${i}`}
 								project={project}
@@ -100,7 +104,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 							layout
 							className={clsx(
 								showFilters
-									? 'block md:col-start-1 md:col-end-[-1] lg:col-start-3 lg:col-end-4 row-start-2 '
+									? 'row-start-2 block md:col-start-1 md:col-end-[-1] lg:col-start-3 lg:col-end-4 '
 									: 'row-start-7'
 							)}
 							initial={{
@@ -113,10 +117,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 							}}
 							transition={{
 								duration: 0.35,
-							}}>
-							<div className='mb-8'>
-								<div className='flex flex-col items-center gap-y-3'>
-									<h1 className='text-2xl font-semibold text-white uppercase lg:mb-8 text-center py-3'>
+							}}
+						>
+							<div className="mb-8">
+								<div className="flex flex-col items-center gap-y-3">
+									<h1 className="py-3 text-center text-2xl font-semibold uppercase text-white lg:mb-8">
 										Domains
 									</h1>
 
@@ -124,31 +129,36 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 										onClick={() => {
 											setDomains([]);
 											setShowFilters(false);
-										}}>
+										}}
+									>
 										Show All
 									</FilterItem>
 
 									<FilterItem
 										onClick={() => handleDomain('web development')}
-										isActive={domains.includes('web development')}>
+										isActive={domains.includes('web development')}
+									>
 										Web Development
 									</FilterItem>
 
 									<FilterItem
 										onClick={() => handleDomain('android development')}
-										isActive={domains.includes('android development')}>
+										isActive={domains.includes('android development')}
+									>
 										Android Development
 									</FilterItem>
 
 									<FilterItem
 										onClick={() => handleDomain('ios development')}
-										isActive={domains.includes('ios development')}>
+										isActive={domains.includes('ios development')}
+									>
 										iOS Development
 									</FilterItem>
 
 									<FilterItem
 										onClick={() => handleDomain('machine learning')}
-										isActive={domains.includes('machine learning')}>
+										isActive={domains.includes('machine learning')}
+									>
 										Machine Learning
 									</FilterItem>
 								</div>

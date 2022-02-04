@@ -25,11 +25,12 @@ const NavLink: React.FC<NavLinkProps> = ({
 					onClick={onClick}
 					className={clsx([
 						router.pathname === href && 'text-blue',
-						'w-max flex items-center gap-x-4',
+						'flex w-max items-center gap-x-4',
 						className,
-					])}>
+					])}
+				>
 					<span>{icon}</span>
-					<span className='text-xl md:text-base'>{children}</span>
+					<span className="text-xl md:text-base">{children}</span>
 				</a>
 			</Link>
 		</>
