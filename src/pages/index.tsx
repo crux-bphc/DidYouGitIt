@@ -14,7 +14,7 @@ const HomePage: NextPage = ({}) => {
 					<CountdownCard />
 				</div>
 				<div className='max-w-full md:max-w-5xl prose prose-invert prose-p:text-gray'>
-					<h1 className='mt-14 text-4xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-3 lg:mb-7'>
+					<h1 className='mt-8 text-4xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-3 lg:mb-7'>
 						Did You Git It?
 					</h1>
 
@@ -32,7 +32,7 @@ const HomePage: NextPage = ({}) => {
 						Tune into XYZ-link on ABC-date for the event. Let's improve the
 						development culture together, shall we?
 					</p>
-					<div className='mt-10'>
+					<div className='my-10'>
 						<Button href='/workflow'>Learn More</Button>
 					</div>
 				</div>

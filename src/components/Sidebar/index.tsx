@@ -12,6 +12,8 @@ import { TiFlowMerge } from 'react-icons/ti';
 import { AiOutlineSchedule, AiOutlineTeam } from 'react-icons/ai';
 import Divider from '../Divider';
 import { motion, MotionProps } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface SidebarProps extends MotionProps {
 	className?: string;
@@ -41,12 +43,27 @@ const Sidebar: React.FC<SidebarProps> = ({
 				transition={transition}
 				className={clsx([
 					'flex flex-col items-center bg-dark-1 justify-between',
-					'lg:py-4 lg:px-6 lg:pr-10',
+					'lg:py-4',
 					className,
 				])}>
 				<div>
-					<div className='text-center'>Logo</div>
-					<div className={clsx(['flex-col flex gap-y-4 mt-20', navClassName])}>
+					<div className='text-center py-3'>
+						<Link href='/' passHref>
+							<Image
+								className='cursor-pointer block'
+								src={'/logo.png'}
+								height={40}
+								width={100}
+								alt='Logo'
+							/>
+						</Link>
+					</div>
+
+					<div
+						className={clsx([
+							'flex-col flex gap-y-4 mt-20 lg:px-6 lg:pr-10',
+							navClassName,
+						])}>
 						<NavLink
 							icon={<HiOutlineHome size={24} />}
 							onClick={onClose}
