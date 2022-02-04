@@ -10,14 +10,17 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 	return (
 		<>
-			<div className='z-10 lg:min-h-[8rem] py-5 lg:py-5 px-3 md:px-8 flex items-center justify-between lg:justify-end md:static md:bg-transparent bg-dark-2 sticky top-0'>
+			<div className='z-10 lg:min-h-[6rem] py-5 lg:py-4 px-3 md:px-8 flex items-center justify-between lg:justify-end md:static md:bg-transparent bg-dark-2 sticky top-0'>
 				<div className='flex items-center gap-5 lg:hidden'>
 					<HiMenuAlt1 onClick={onOpen} size={25} />
 					<p>LOGO</p>
 				</div>
 				<div className='flex items-center gap-x-3'>
 					<div className='flex items-center gap-x-3'>
-						<Button className='md:hidden' href='#' isExternal>
+						<Button
+							className='md:hidden'
+							href='https://discord.gg/E4Cb78Rz'
+							isExternal>
 							<FaDiscord size={20} />
 						</Button>
 

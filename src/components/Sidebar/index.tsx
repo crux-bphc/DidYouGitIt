@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 				transition={transition}
 				className={clsx([
 					'flex flex-col items-center bg-dark-1 justify-between',
-					'lg:py-4 lg:px-6',
+					'lg:py-4 lg:px-6 lg:pr-10',
 					className,
 				])}>
 				<div>

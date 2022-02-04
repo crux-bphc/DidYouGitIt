@@ -17,7 +17,6 @@ interface AboutPageProps {
 }
 
 const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
-	console.log({ content, data });
 	return (
 		<>
 			<div className='lg:pl-36 md:px-10 -mt-5 lg:mt-0 p-4'>
@@ -34,7 +33,7 @@ const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
 				</div>
 
 				<div className='mt-6 md:max-w-4xl'>
-					<h3 className='text-xl font-semibold mb-4'>Organizers</h3>
+					<h3 className='text-xl font-semibold mb-4 text-blue'>Organizers</h3>
 					<div className='flex gap-6 flex-wrap'>
 						{data.organizers.map((club) => (
 							<ClubCard key={club.name} club={club} />
@@ -43,7 +42,7 @@ const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
 				</div>
 
 				<div className='mt-6 md:max-w-4xl'>
-					<h3 className='text-xl font-semibold mb-4'>Participants</h3>
+					<h3 className='text-xl font-semibold mb-4 text-blue'>Participants</h3>
 					<div className='flex gap-6 flex-wrap'>
 						{data.participants.map((club) => (
 							<ClubCard key={club.name} club={club} />

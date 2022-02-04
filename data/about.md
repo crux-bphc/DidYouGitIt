@@ -9,9 +9,15 @@ organizers:
     },
     {
       name: 'CRUX BPHC',
-      image: '/assets/crux.png',
+      image: '/assets/crux-white.png',
       style: { height: 68, width: 68 },
       alt: 'crux-bphc',
+    },
+    {
+      name: 'DevSoc BPGC',
+      image: '/assets/devsoc-white.png',
+      style: { height: 70, width: 70 },
+      alt: 'devsoc-bpgc',
     },
   ]
 
@@ -19,18 +25,18 @@ participants:
   [
     {
       name: 'Smart Campus',
-      image: '/assets/smartcampus.png',
+      image: '/assets/smartcampus-white.png',
       style: { height: 68, width: 68 },
       alt: 'smart-campus',
     },
     {
       name: 'SWD BPHC',
-      image: '/assets/swd.png',
+      image: '/assets/swd-white.png',
       style: { height: 70, width: 70 },
       alt: 'swd-bphc',
     },
     {
-      name: 'Aero',
+      name: 'Aero D',
       image: '/assets/aero.png',
       style: { height: 70, width: 70 },
       alt: 'aero',
