@@ -1,82 +1,76 @@
-import { NextPage } from 'next';
+import matter from 'gray-matter';
+import { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
+import path from 'path';
 import React from 'react';
+import fs from 'fs';
+import { Club } from '../types';
+import { marked } from 'marked';
+import ClubCard from '../components/ClubCard';
 
-const AboutUsPage: NextPage = ({}) => {
+interface AboutPageProps {
+	content: string;
+	data: {
+		organizers: Club[];
+		participants: Club[];
+	};
+}
+
+const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
+	console.log({ content, data });
 	return (
 		<>
-			<div className='lg:pl-36 md:px-10 mt-10 lg:mt-0 p-4'>
+			<div className='lg:pl-36 md:px-10 -mt-5 lg:mt-0 p-4'>
 				<div className='max-w-full md:max-w-4xl prose prose-invert'>
 					<h1 className='mt-14 text-4xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-3 lg:mb-7'>
 						About
 					</h1>
-					<p className='text-gray'>
-						Did You Git It? is a N-day Hackathon to promote open source
-						practices among both budding and experienced student developers. We
-						aim to encourage enthusiastic minds to come up with innovative
-						solutions to software problems. The Hackathon comprises of projects
-						hosted as open source on GitHub and participants work to contribute
-						to these projects. Enter the world of open source software
-						technology, and express your ingenious ideas to make people’s lives
-						easier.
-					</p>
+					<div
+						className='text-gray'
+						dangerouslySetInnerHTML={{
+							__html: marked(content),
+						}}
+					/>
 				</div>
 
-				<div className='mt-36 flex gap-8 items-center'>
-					<div className='rounded px-5 pt-5'>
-						<Image
-							className='opacity-70'
-							src='/assets/acm.png'
-							height={60}
-							width={160}
-							alt='ACM-BPHC'
-						/>
-						<h5 className='pb-4 mt-2 text-center text-gray font-semibold'>
-							ACM BPHC
-						</h5>
+				<div className='mt-6 md:max-w-4xl'>
+					<h3 className='text-xl font-semibold mb-4'>Organizers</h3>
+					<div className='flex gap-6 flex-wrap'>
+						{data.organizers.map((club) => (
+							<ClubCard key={club.name} club={club} />
+						))}
 					</div>
-					<div className='flex flex-col items-center rounded px-5 pt-5'>
-						<Image
-							className='opacity-70'
-							src='/assets/crux.png'
-							height={68}
-							width={68}
-							alt='CRUX-BPHC'
-						/>
-						<h5 className='pb-4 mt-2 text-center text-gray font-semibold'>
-							CRUX
-						</h5>
-					</div>
+				</div>
 
-					<div className='flex flex-col items-center rounded px-5 pt-5'>
-						<Image
-							className='opacity-70'
-							src='/assets/smartcampus.png'
-							height={68}
-							width={68}
-							alt='ACM-BPHC'
-						/>
-						<h5 className='pb-4 text-gray uppercase mt-2 text-center font-semibold'>
-							Smart Campus
-						</h5>
-					</div>
-
-					<div className='flex flex-col items-center rounded px-5 pt-5'>
-						<Image
-							className='opacity-70'
-							src='/assets/swd.png'
-							height={70}
-							width={70}
-							alt='ACM-BPHC'
-						/>
-						<h5 className='pb-4 mt-2 text-center text-gray font-semibold'>
-							SWD BPHC
-						</h5>
+				<div className='mt-6 md:max-w-4xl'>
+					<h3 className='text-xl font-semibold mb-4'>Participants</h3>
+					<div className='flex gap-6 flex-wrap'>
+						{data.participants.map((club) => (
+							<ClubCard key={club.name} club={club} />
+						))}
 					</div>
 				</div>
 			</div>
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = () => {
+	const mdData = fs.readFileSync(path.join('data/about.md'), 'utf8');
+	const { data, content } = matter(mdData);
+
+	if (!data || !content) {
+		return {
+			notFound: true,
+		};
+	}
+
+	return {
+		props: {
+			data,
+			content,
+		},
+	};
 };
 
 export default AboutUsPage;

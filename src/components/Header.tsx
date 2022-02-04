@@ -17,13 +17,15 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 				</div>
 				<div className='flex items-center gap-x-3'>
 					<div className='flex items-center gap-x-3'>
-						<a
-							className='md:hidden bg-blue hover:bg-blue focus:bg-blue flex justify-center p-2 transition-all duration-300 ease-out'
-							href='#'
-							target={'_blank'}>
+						<Button className='md:hidden' href='#' isExternal>
 							<FaDiscord size={20} />
-						</a>
-						<Button variant='white' isExternal className='hidden md:block' href='#'>
+						</Button>
+
+						<Button
+							variant='white'
+							isExternal
+							className='hidden md:block'
+							href='#'>
 							Join Discord
 						</Button>
 					</div>

@@ -11,30 +11,42 @@ import {
 import { TiFlowMerge } from 'react-icons/ti';
 import { AiOutlineSchedule, AiOutlineTeam } from 'react-icons/ai';
 import Divider from '../Divider';
+import { motion, MotionProps } from 'framer-motion';
 
-interface SidebarProps {
+interface SidebarProps extends MotionProps {
 	className?: string;
+	navClassName?: string;
 	onClose?: () => void;
-	show?: boolean;
+	isMotion?: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({
+	className,
+	onClose,
+	navClassName,
+	isMotion,
+	initial,
+	animate,
+	exit,
+	transition,
+}) => {
+	const Component = isMotion ? motion.aside : 'aside';
+
 	return (
 		<>
-			<div
-				onClick={() => onClose?.()}
-				className='fixed z-20 bg-dark-1 opacity-70 h-full w-full lg:hidden'></div>
-			<div
+			<Component
+				initial={initial}
+				animate={animate}
+				exit={exit}
+				transition={transition}
 				className={clsx([
-					'z-30 pl-14 lg:pl-0 px-2 sm:px-4 md:px-10 py-10 flex flex-col justify-between h-full lg:items-center fixed top-0 left-0',
-					'bg-dark-1 lg:bg-transparent min-w-[75vw] sm:min-w-[45vw] md:min-w-[35vw] lg:min-w-[inherit] lg:w-[9.5%]',
+					'flex flex-col items-center bg-dark-1 justify-between',
+					'lg:py-4 lg:px-6',
 					className,
 				])}>
 				<div>
-					<div>
-						<h1 className='text-lg lg:text-center'>Logo</h1>
-					</div>
-					<div className={clsx(['flex-col flex gap-6 mt-20'])}>
+					<div className='text-center'>Logo</div>
+					<div className={clsx(['flex-col flex gap-y-4 mt-20', navClassName])}>
 						<NavLink
 							icon={<HiOutlineHome size={24} />}
 							onClick={onClose}
@@ -98,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className, onClose }) => {
 						<FiFacebook size={26} />
 					</a>
 				</div>
-			</div>
+			</Component>
 		</>
 	);
 };

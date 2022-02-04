@@ -19,3 +19,15 @@ export type Team = {
 	coverPic: string;
 	github: string;
 };
+
+export type Style = {
+	height: number | string;
+	width: number | string;
+};
+
+export type Club = {
+	name: string;
+	image: string;
+	alt: string;
+	style: Style;
+};

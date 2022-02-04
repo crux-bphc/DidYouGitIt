@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './Header';
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar/index';
 import dynamic from 'next/dynamic';
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import Backdrop from './Backdrop';
 
 interface LayoutProps {}
 
@@ -28,25 +29,39 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 					outerScale={5}
 				/>
 			)}
-			{show && (
-				<Sidebar
-					show={show}
-					onClose={() => setShow(false)}
-					className='lg:hidden'
-				/>
-			)}
-			<div className='grid lg:grid-cols-12 min-h-screen'>
-				<div className='hidden lg:block md:col-start-1 md:col-end-2 bg-dark-1 relative'>
-					<Sidebar />
-				</div>
-				<main className='lg:col-start-2 lg:col-end-13 bg-dark-2'>
+			<AnimatePresence>
+				{show && (
+					<>
+						<Sidebar
+							isMotion
+							onClose={() => setShow(false)}
+							className='px-10 py-8 fixed top-0 left-0 h-full z-30 lg:hidden w-72 md:w-52 !items-start'
+							initial={{ x: -1000, opacity: 0 }}
+							exit={{ x: -1000, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							transition={{ duration: 0.5 }}
+						/>
+
+						<Backdrop
+							initial={{ opacity: 0 }}
+							exit={{ opacity: 0 }}
+							animate={{ opacity: 0.65 }}
+							transition={{ duration: 0.3 }}
+							onClose={() => setShow(false)}
+						/>
+					</>
+				)}
+			</AnimatePresence>
+			<div className='flex min-h-screen'>
+				<Sidebar className='hidden lg:flex sticky h-screen top-0' />
+				<main className='bg-dark-2 flex-1'>
 					<Header onOpen={() => setShow(true)} />
 					<AnimatePresence exitBeforeEnter>
 						<motion.div
 							key={router.route}
 							initial={{ opacity: 0, y: -20 }}
 							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: -20 }}
+							exit={{ opacity: 0, y: 20 }}
 							transition={{ duration: 0.65 }}
 							className='p-0 lg:p-4'>
 							{children}

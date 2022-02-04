@@ -100,7 +100,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 							layout
 							className={clsx(
 								showFilters
-									? 'block lg:col-start-3 lg:col-end-4 row-start-2 '
+									? 'block md:col-start-1 md:col-end-[-1] lg:col-start-3 lg:col-end-4 row-start-2 '
 									: 'row-start-7'
 							)}
 							initial={{
@@ -110,13 +110,13 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 							animate={{
 								opacity: 1,
 								y: 0,
-								transition: {
-									duration: 0.35,
-								},
+							}}
+							transition={{
+								duration: 0.35,
 							}}>
 							<div className='mb-8'>
 								<div className='flex flex-col items-center gap-y-3'>
-									<h1 className='text-2xl font-semibold text-white uppercase mb-8 text-center py-3'>
+									<h1 className='text-2xl font-semibold text-white uppercase lg:mb-8 text-center py-3'>
 										Domains
 									</h1>
 

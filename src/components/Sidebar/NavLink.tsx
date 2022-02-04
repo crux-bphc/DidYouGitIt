@@ -29,7 +29,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 						className,
 					])}>
 					<span>{icon}</span>
-					<span>{children}</span>
+					<span className='text-xl md:text-base'>{children}</span>
 				</a>
 			</Link>
 		</>
