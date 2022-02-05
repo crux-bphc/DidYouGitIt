@@ -7,28 +7,11 @@ import { Workflow } from '../types';
 import WorkflowCard from '../components/WorkflowCard';
 import clsx from 'clsx';
 
-export const getStaticProps: GetStaticProps = async () => {
-	const mdData = fs.readFileSync(path.join('data/workflow.md'), 'utf8');
-	const { data } = matter(mdData);
-
-	if (!data.workflow) {
-		return {
-			notFound: true,
-		};
-	}
-
-	return {
-		props: {
-			workflow: data.workflow,
-		},
-	};
-};
-
 interface WorkflowPageProps {
 	workflow: Workflow[];
 }
 
-const WorkflowPage: React.FC<WorkflowPageProps> = ({ workflow }) => {
+const WorkflowPage: NextPage<WorkflowPageProps> = ({ workflow }) => {
 	return (
 		<>
 			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
@@ -64,6 +47,23 @@ const WorkflowPage: React.FC<WorkflowPageProps> = ({ workflow }) => {
 			</div>
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const mdData = fs.readFileSync(path.join('data/workflow.md'), 'utf8');
+	const { data } = matter(mdData);
+
+	if (!data.workflow) {
+		return {
+			notFound: true,
+		};
+	}
+
+	return {
+		props: {
+			workflow: data.workflow,
+		},
+	};
 };
 
 export default WorkflowPage;

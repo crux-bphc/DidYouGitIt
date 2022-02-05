@@ -8,7 +8,7 @@ import ProjectCard from '../components/ProjectCard';
 import { lgColumns, mdColumns } from '../utils/grid';
 import { Project } from '../types';
 import { HiFilter, HiX } from 'react-icons/hi';
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import FilterItem from '../components/Filter/FilterItem';
 
 interface ProjectsPageProps {
@@ -30,7 +30,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 
 	React.useEffect(() => {
 		if (domains.length > 0) {
-			const newData = projects.filter((project) =>
+			const newData = projects.filter((project, i) =>
 				domains.includes(project.domain.toLowerCase())
 			);
 
