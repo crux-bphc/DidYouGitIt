@@ -62,6 +62,13 @@ projects: [
 			link: 'https://github.com/crux-bphc/batchsnap-sorter',
 			logo: '/assets/crux.png',
 		},
+		{
+			title: 'AERO Project Website',
+			domain: 'Web Development',
+			description: 'Website for the AeroD club porject',
+			link: 'https://github.com/crux-bphc/batchsnap-sorter',
+			logo: '/assets/aero-d.png',
+		},
 
 	]
 ---
