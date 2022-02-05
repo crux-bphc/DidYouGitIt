@@ -5,9 +5,9 @@ interface CountdownCardProps {}
 const CountdownCard: React.FC<CountdownCardProps> = ({}) => {
 	return (
 		<>
-			<div className='px-4 py-4 text-center bg-dark-1'>
-				<p className='uppercase mb-3 text-gray text-sm md:text-md'>hours</p>
-				<p className='text-3xl md:text-6xl text-blue'>00</p>
+			<div className="bg-dark-1 px-4 py-4 text-center">
+				<p className="md:text-md mb-3 text-sm uppercase text-gray">hours</p>
+				<p className="text-3xl text-blue md:text-6xl">00</p>
 			</div>
 		</>
 	);

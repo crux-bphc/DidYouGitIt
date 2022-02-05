@@ -11,9 +11,9 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 	return (
 		<>
-			<div className='flex flex-col border-[1px] md:min-h-[540px] border-gray p-6 hover:border-white hover:shadow-md hover:shadow-white transition-all duration-300 ease-out mb-10'>
-				<div className='flex items-center justify-between mb-20'>
-					<p className='text-lg'>
+			<div className="mb-10 flex flex-col border-[1px] border-gray p-6 transition-all duration-300 ease-out hover:border-white hover:shadow-md hover:shadow-white md:min-h-[540px]">
+				<div className="mb-20 flex items-center justify-between">
+					<p className="text-lg">
 						{`${index}`.length === 1 ? `0${index + 1}` : index + 1}
 					</p>
 					<div>
@@ -25,19 +25,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						/>
 					</div>
 				</div>
-				<div className='flex-1 flex flex-col justify-between'>
+				<div className="flex flex-1 flex-col justify-between">
 					<div>
-						<h5 className='uppercase font-medium text-3xl mb-3 max-w-[78%]'>
+						<h5 className="mb-3 max-w-[78%] text-3xl font-medium uppercase">
 							{project.title}
 						</h5>
-						<h6 className='uppercase text-blue mb-10'>{project.domain}</h6>
-						<p className='text-sm text-gray pb-5 lh-15 mb-5'>
+						<h6 className="mb-10 uppercase text-blue">{project.domain}</h6>
+						<p className="lh-15 mb-5 pb-5 text-sm text-gray">
 							{project.description}
 						</p>
 					</div>
 
-					<div className='text-right'>
-						<Button isExternal size='sm' href={project.link}>
+					<div className="text-right">
+						<Button isExternal size="sm" href={project.link}>
 							View
 						</Button>
 					</div>

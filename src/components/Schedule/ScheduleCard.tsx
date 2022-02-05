@@ -16,25 +16,27 @@ const ScheduleCard = React.forwardRef<HTMLDivElement, ScheduleCardProps>(
 			<div
 				ref={ref}
 				className={clsx([
-					'group h-[130px] md:h-[auto] md:w-[125px] px-4 py-4 rounded-sm w-[40vw] sm:w-[30vw]',
-					'hover:bg-blue transition-all duration-300 ease-out',
-					selected ? 'bg-blue scale-105' : 'bg-dark-1 scale-100',
-				])}>
+					'group h-[130px] w-[40vw] rounded-sm px-4 py-4 sm:w-[30vw] md:h-[auto] md:w-[125px]',
+					'transition-all duration-300 ease-out hover:bg-blue',
+					selected ? 'scale-105 bg-blue' : 'scale-100 bg-dark-1',
+				])}
+			>
 				<div
 					className={clsx([
-						'w-3/4 pb-3 mb-3 rounded-sm -m-4 py-4 pl-4',
-						'group-hover:bg-white transition-all duration-300 ease-out',
+						'-m-4 mb-3 w-3/4 rounded-sm py-4 pb-3 pl-4',
+						'transition-all duration-300 ease-out group-hover:bg-white',
 						selected ? 'bg-white' : 'bg-dark-2',
-					])}>
-					<p className='uppercase text-gray text-xs text-left group-hover:text-blue transition-all duration-300 ease-out'>
+					])}
+				>
+					<p className="text-left text-xs uppercase text-gray transition-all duration-300 ease-out group-hover:text-blue">
 						Day {day}
 					</p>
 				</div>
-				<div className='flex mt-6 md:mt-0 gap-2 md:gap-4 md:justify-evenly items-end'>
-					<p className='text-3xl text-white'>
+				<div className="mt-6 flex items-end gap-2 md:mt-0 md:justify-evenly md:gap-4">
+					<p className="text-3xl text-white">
 						{`${date}`.length === 1 ? `0${date}` : date}
 					</p>
-					<p className='uppercase text-lg text-white'>{month}</p>
+					<p className="text-lg uppercase text-white">{month}</p>
 				</div>
 			</div>
 		);

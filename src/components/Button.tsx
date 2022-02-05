@@ -36,11 +36,12 @@ const Button: React.FC<ButtonProps> = ({
 				<Component
 					target={isExternal ? '_blank' : undefined}
 					className={clsx([
-						'rounded-sm border-2 hover:opacity-80 transition-all duration-300 ease-out',
+						'rounded-sm border-2 transition-all duration-300 ease-out hover:opacity-80',
 						sizes[size],
 						variants[variant],
 						className,
-					])}>
+					])}
+				>
 					{children}
 				</Component>
 			</Link>

@@ -37,7 +37,7 @@ participants:
     },
     {
       name: 'Aero D',
-      image: '/assets/aero.png',
+      image: '/assets/aero-white.png',
       style: { height: 70, width: 70 },
       alt: 'aero',
     },

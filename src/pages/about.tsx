@@ -19,31 +19,31 @@ interface AboutPageProps {
 const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
 	return (
 		<>
-			<div className='lg:pl-36 md:px-10 -mt-5 lg:mt-0 p-4'>
-				<div className='max-w-full md:max-w-4xl prose prose-invert'>
-					<h1 className='mt-14 text-4xl sm:text-5xl md:text-[50px] lg:text-[60px] xl:text-[80px] font-bold mb-3 lg:mb-7'>
+			<div className="-mt-5 p-4 md:px-10 lg:mt-0 lg:pl-36">
+				<div className="prose prose-invert max-w-full md:max-w-4xl">
+					<h1 className="mt-14 mb-3 text-4xl font-bold sm:text-5xl md:text-[50px] lg:mb-7 lg:text-[60px] xl:text-[80px]">
 						About
 					</h1>
 					<div
-						className='text-gray'
+						className="text-gray"
 						dangerouslySetInnerHTML={{
 							__html: marked(content),
 						}}
 					/>
 				</div>
 
-				<div className='mt-6 md:max-w-4xl'>
-					<h3 className='text-xl font-semibold mb-4 text-blue'>Organizers</h3>
-					<div className='flex gap-6 flex-wrap'>
+				<div className="mt-6 md:max-w-4xl">
+					<h3 className="mb-4 text-xl font-semibold text-blue">Organizers</h3>
+					<div className="flex flex-wrap gap-6">
 						{data.organizers.map((club) => (
 							<ClubCard key={club.name} club={club} />
 						))}
 					</div>
 				</div>
 
-				<div className='mt-6 md:max-w-4xl'>
-					<h3 className='text-xl font-semibold mb-4 text-blue'>Participants</h3>
-					<div className='flex gap-6 flex-wrap'>
+				<div className="mt-6 md:max-w-4xl">
+					<h3 className="mb-4 text-xl font-semibold text-blue">Participants</h3>
+					<div className="flex flex-wrap gap-6">
 						{data.participants.map((club) => (
 							<ClubCard key={club.name} club={club} />
 						))}

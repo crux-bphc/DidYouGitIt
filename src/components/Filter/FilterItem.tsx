@@ -28,8 +28,9 @@ const FilterItem: React.FC<FilterItemProps> = ({
 					scale: 1.15,
 					color: 'var(--color-white)',
 				}}
-				transition={{ type: 'spring', stiffness: 380 }}>
-				<div className='flex items-center gap-x-2'>
+				transition={{ type: 'spring', stiffness: 380 }}
+			>
+				<div className="flex items-center gap-x-2">
 					<span>{children}</span>
 				</div>
 			</motion.button>

@@ -57,7 +57,7 @@ projects: [
 		},
 		{
 			title: 'Batchsnap Sorter',
-			domain: 'Machine Learning, Web Development',
+			domain: 'Machine Learning',
 			description: 'Identifies unique faces from corpus of photos and allows a person to retrieve all images containing their face. Clustering of images is done on server side by using facial feature embeddings, and the client facing portal is made in React.js.',
 			link: 'https://github.com/crux-bphc/batchsnap-sorter',
 			logo: '/assets/crux.png',
@@ -66,9 +66,8 @@ projects: [
 			title: 'AERO Project Website',
 			domain: 'Web Development',
 			description: 'Website for the AeroD club porject',
-			link: 'https://github.com/crux-bphc/batchsnap-sorter',
+			link: 'https://github.com/God-SammY-lord/AERO-PROJECT-WEBSITE.git',
 			logo: '/assets/aero-d.png',
 		},
-
 	]
 ---

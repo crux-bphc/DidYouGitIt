@@ -42,39 +42,45 @@ const Sidebar: React.FC<SidebarProps> = ({
 				exit={exit}
 				transition={transition}
 				className={clsx([
-					'flex flex-col items-center bg-dark-1 justify-between',
+					'flex flex-col items-center justify-between bg-dark-1',
 					'lg:py-4',
 					className,
-				])}>
+				])}
+			>
 				<div>
-					<div className='text-center py-3'>
-						<Link href='/' passHref>
-							<Image
-								className='cursor-pointer block'
-								src={'/logo.png'}
-								height={40}
-								width={100}
-								alt='Logo'
-							/>
+					<div className="py-3 text-center">
+						<Link href="/" passHref>
+							<a>
+								<Image
+									className="block cursor-pointer"
+									src={'/logo.png'}
+									height={40}
+									width={100}
+									alt="Logo"
+								/>
+							</a>
 						</Link>
 					</div>
 
 					<div
 						className={clsx([
-							'flex-col flex gap-y-4 mt-20 lg:px-6 lg:pr-10',
+							'mt-20 flex flex-col gap-y-4 lg:px-6 lg:pr-10',
 							navClassName,
-						])}>
+						])}
+					>
 						<NavLink
 							icon={<HiOutlineHome size={24} />}
 							onClick={onClose}
-							href='/'>
+							href="/"
+						>
 							Home
 						</NavLink>
 
 						<NavLink
 							icon={<HiOutlineInformationCircle size={24} />}
 							onClick={onClose}
-							href='/about'>
+							href="/about"
+						>
 							About
 						</NavLink>
 
@@ -83,14 +89,16 @@ const Sidebar: React.FC<SidebarProps> = ({
 						<NavLink
 							icon={<TiFlowMerge size={24} />}
 							onClick={onClose}
-							href='/workflow'>
+							href="/workflow"
+						>
 							Workflow
 						</NavLink>
 
 						<NavLink
 							icon={<HiOutlineViewGrid size={24} />}
 							onClick={onClose}
-							href='/projects'>
+							href="/projects"
+						>
 							Projects
 						</NavLink>
 
@@ -98,32 +106,35 @@ const Sidebar: React.FC<SidebarProps> = ({
 
 						<NavLink
 							icon={<AiOutlineSchedule size={24} />}
-							className='block lg:hidden'
+							className="block lg:hidden"
 							onClick={onClose}
-							href='/schedule'>
+							href="/schedule"
+						>
 							Schedule
 						</NavLink>
 
 						<NavLink
 							icon={<AiOutlineTeam size={24} />}
 							onClick={onClose}
-							href='/team'>
+							href="/team"
+						>
 							Team
 						</NavLink>
 
 						<NavLink
 							icon={<HiOutlineQuestionMarkCircle size={24} />}
 							onClick={onClose}
-							href='/faqs'>
+							href="/faqs"
+						>
 							FAQ's
 						</NavLink>
 					</div>
 				</div>
-				<div className='flex lg:items-center gap-6 pb-5'>
-					<a href='#'>
+				<div className="flex gap-6 pb-5 lg:items-center">
+					<a href="#">
 						<FiTwitter size={26} />
 					</a>
-					<a href='#'>
+					<a href="#">
 						<FiFacebook size={26} />
 					</a>
 				</div>

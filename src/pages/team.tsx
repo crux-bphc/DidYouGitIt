@@ -15,8 +15,8 @@ interface TeamPageProps {
 const TeamPage: NextPage<TeamPageProps> = ({ data }) => {
 	return (
 		<>
-			<div className='max-w-6xl mx-auto gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:pb-6 p-4'>
-				<h1 className='text-4xl my-4 lg:my-0 md:text-[54px] lg:mb-10 text-center lg:text-left font-extrabold'>
+			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 p-4 md:grid-cols-2 lg:grid-cols-3 lg:pb-6">
+				<h1 className="my-4 text-center text-4xl font-extrabold md:text-[54px] lg:my-0 lg:mb-10 lg:text-left">
 					Team
 				</h1>
 
@@ -33,7 +33,8 @@ const TeamPage: NextPage<TeamPageProps> = ({ data }) => {
 								mdColumn.start,
 								mdColumn.end,
 								'col-start-1 col-end-2',
-							])}>
+							])}
+						>
 							<TeamCard team={team} />
 						</div>
 					);
