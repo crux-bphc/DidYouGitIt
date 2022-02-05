@@ -1,15 +1,15 @@
 import clsx from 'clsx';
 import React from 'react';
 
-interface TimeBubbleProps {
-	startTime?: string;
-	endTime?: string;
+interface DateBubbleProps {
+	date: string;
+	year: string;
 	size?: 'md' | 'sm';
 }
 
-const TimeBubble: React.FC<TimeBubbleProps> = ({
-	startTime,
-	endTime,
+const DateBubble: React.FC<DateBubbleProps> = ({
+	date,
+	year,
 	size = 'md',
 }) => {
 	return (
@@ -18,10 +18,10 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({
 				className={clsx(
 					'relative grid place-items-center rounded-full border-2 border-dashed border-blue bg-dark-1 px-4 py-4 text-center',
 					size === 'md' && 'h-[6.5rem] w-[6.5rem] lg:h-[8rem] lg:w-[8rem]',
-					size === 'sm' && 'h-[5.85rem] w-[5.85rem]'
+					size === 'sm' && 'h-[5.25rem] w-[5.25rem]'
 				)}
 			>
-				<div className="border-2-2 absolute left-[50%] -z-10 hidden h-[20rem] border border-dashed border-blue md:block" />
+				<div className="border-2-2 absolute left-[50%] -z-10 hidden h-[12rem] border border-dashed border-blue md:block" />
 				<div>
 					<div className="flex items-center justify-evenly gap-1">
 						<p
@@ -30,10 +30,7 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({
 								size === 'sm' && 'text-sm',
 							])}
 						>
-							{startTime.split(' ')[0]}
-						</p>
-						<p className={clsx(['text-xs uppercase text-gray'])}>
-							{startTime.split(' ')[1]}
+							{date}
 						</p>
 					</div>
 					<div className="flex items-center justify-evenly gap-1">
@@ -43,10 +40,7 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({
 								size === 'sm' && 'text-sm',
 							])}
 						>
-							{endTime.split(' ')[0]}
-						</p>
-						<p className={clsx(['text-xs uppercase text-gray'])}>
-							{endTime.split(' ')[1]}
+							{year}
 						</p>
 					</div>
 				</div>
@@ -55,4 +49,4 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({
 	);
 };
 
-export default TimeBubble;
+export default DateBubble;

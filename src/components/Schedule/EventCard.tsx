@@ -1,25 +1,22 @@
 import React from 'react';
-import TimeBubble from './TimeBubble';
+import DateBubble from './DateBubble';
 
-interface EventCardProps {}
+interface EventCardProps {
+	title: string;
+	date: string;
+	year: string;
+}
 
-const EventCard: React.FC<EventCardProps> = ({}) => {
+const EventCard: React.FC<EventCardProps> = ({title, date, year}) => {
 	return (
 		<>
-			<div className="relative mb-4 rounded-sm bg-dark-1 px-4 py-4 md:mb-0">
+			<div className="relative mb-4 rounded-sm bg-dark-1 px-4 py-4 md:mb-0 
+							md:border md:border-gray md:hover:border-white md:hover:shadow-md md:hover:shadow-white w-full"
+			>
 				<div className="absolute right-0 -top-10 md:hidden">
-					<TimeBubble size="sm" startTime="09:00 AM" endTime="10:00 AM" />
+					<DateBubble size="sm" date={date} year={year} />
 				</div>
-				<h1 className="mt-6 mb-3 text-[20px] uppercase">Event 1 </h1>
-				<p className="wrap mb-3 text-sm text-gray">
-					Sed a augue nec purus lobortis pretium. Class aptent taciti sociosqu
-					ad litora torquent per conubia
-				</p>
-				<div className="flex items-center justify-end">
-					<button className="rounded-sm bg-blue py-2 px-4 text-sm font-medium text-white transition-all duration-300 ease-out hover:opacity-80">
-						View
-					</button>
-				</div>
+				<h1 className="mt-12 md:mt-6 mb-3 text-[20px] md:text-center">{title}</h1>
 			</div>
 		</>
 	);

@@ -31,3 +31,10 @@ export type Club = {
 	alt: string;
 	style: Style;
 };
+
+export type Schedule = {
+	title: string;
+	date: string;
+	year: string;
+	orientation?: 'left' | 'right';
+};
