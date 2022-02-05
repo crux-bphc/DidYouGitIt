@@ -18,6 +18,9 @@ export type Team = {
 	subtitle: string;
 	coverPic: string;
 	github: string;
+	facebook?: string;
+	linkedin?: string;
+	twitter?: string;
 };
 
 export type Style = {

@@ -8,7 +8,7 @@ interface TeamCardProps {
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
-	const { coverPic, name, subtitle, github } = team;
+	const { coverPic, name, subtitle, github, facebook, twitter, linkedin } = team;
 
 	return (
 		<>
@@ -19,19 +19,19 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
 				<div className="mb-4 flex items-center justify-center gap-1">
 					<a
 						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
-						href="#"
+						href={facebook ? facebook : '#'}
 					>
 						<FiFacebook size={20} />
 					</a>
 					<a
 						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
-						href="#"
+						href={twitter ? twitter : '#'}
 					>
 						<FiTwitter size={20} />
 					</a>
 					<a
 						className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
-						href="#"
+						href={linkedin ? linkedin : '#'}
 					>
 						<FiLinkedin size={20} />
 					</a>
