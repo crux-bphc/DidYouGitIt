@@ -5,6 +5,7 @@ import React from 'react';
 import fs from 'fs';
 import { Team } from '../types';
 import TeamSection from '../components/TeamSection';
+import Seo from '../components/Seo';
 
 interface TeamPageProps {
 	data: {
@@ -15,6 +16,7 @@ interface TeamPageProps {
 const TeamPage: NextPage<TeamPageProps> = ({ data }) => {
 	return (
 		<>
+			<Seo title="Team" />
 			{Object.keys(data).map((key) => {
 				return <TeamSection team={data[key] as any} key={key} />;
 			})}

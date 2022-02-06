@@ -131,10 +131,10 @@ const Sidebar: React.FC<SidebarProps> = ({
 					</div>
 				</div>
 				<div className="flex gap-6 pb-5 lg:items-center">
-					<a href="#">
+					<a href="#" aria-label="twitter-link" className="text-sm">
 						<FiTwitter size={26} />
 					</a>
-					<a href="#">
+					<a aria-label="facebook-link" className="text-sm" href="#">
 						<FiFacebook size={26} />
 					</a>
 				</div>

@@ -5,6 +5,7 @@ import path from 'path';
 import React from 'react';
 import ScheduleItem from '../components/Schedule/ScheduleItem';
 import { Schedule } from '../types';
+import Seo from '../components/Seo';
 
 interface SchedulePageProps {
 	schedule: Schedule[];
@@ -13,6 +14,8 @@ interface SchedulePageProps {
 const SchedulePage: NextPage<SchedulePageProps> = ({ schedule }) => {
 	return (
 		<>
+			<Seo title="Schedule" />
+
 			<h1 className="mb-10 text-center text-[40px]  font-extrabold">
 				Schedule Plan
 			</h1>

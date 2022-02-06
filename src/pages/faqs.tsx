@@ -4,10 +4,12 @@ import { NextPage } from 'next';
 import path from 'path';
 import React from 'react';
 import { marked } from 'marked';
+import Seo from '../components/Seo';
 
 const FaqsPage: NextPage<{ content: string }> = ({ content }) => {
 	return (
 		<>
+			<Seo title="FAQ's" />
 			<div className="mx-auto max-w-full p-5 lg:p-0">
 				<h1 className="mb-20 text-left text-6xl font-bold lg:text-center">
 					FAQs

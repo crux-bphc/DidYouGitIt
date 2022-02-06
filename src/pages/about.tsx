@@ -7,6 +7,7 @@ import fs from 'fs';
 import { Club } from '../types';
 import { marked } from 'marked';
 import ClubCard from '../components/ClubCard';
+import Seo from '../components/Seo';
 
 interface AboutPageProps {
 	content: string;
@@ -19,6 +20,7 @@ interface AboutPageProps {
 const AboutUsPage: NextPage<AboutPageProps> = ({ content, data }) => {
 	return (
 		<>
+			<Seo title="About" />
 			<div className="-mt-5 p-4 md:px-10 lg:mt-0 lg:pl-36">
 				<div className="prose prose-invert max-w-full md:max-w-4xl">
 					<h1 className="mt-14 mb-3 text-4xl font-bold sm:text-5xl md:text-[50px] lg:mb-7 lg:text-[60px] xl:text-[80px]">

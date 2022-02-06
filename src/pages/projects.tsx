@@ -10,6 +10,7 @@ import { Project } from '../types';
 import { HiFilter, HiX } from 'react-icons/hi';
 import { AnimatePresence, motion } from 'framer-motion';
 import FilterItem from '../components/Filter/FilterItem';
+import Seo from '../components/Seo';
 
 interface ProjectsPageProps {
 	projects: Project[];
@@ -42,6 +43,8 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 
 	return (
 		<>
+			<Seo title="Projects" />
+
 			<div
 				className={clsx(
 					'mx-auto grid grid-cols-1 gap-5 p-4 md:grid-cols-2 lg:pb-6',

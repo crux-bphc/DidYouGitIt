@@ -2,10 +2,12 @@ import { NextPage } from 'next';
 import React from 'react';
 import Button from '../components/Button';
 import CountdownCard from '../components/CountdownCard';
+import Seo from '../components/Seo';
 
 const HomePage: NextPage = ({}) => {
 	return (
 		<>
+			<Seo />
 			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
 				<div className="flex items-center justify-start gap-2 md:gap-5">
 					<CountdownCard />

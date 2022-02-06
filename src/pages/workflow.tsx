@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import { Workflow } from '../types';
 import WorkflowCard from '../components/WorkflowCard';
 import clsx from 'clsx';
+import Seo from '../components/Seo';
 
 interface WorkflowPageProps {
 	workflow: Workflow[];
@@ -14,6 +15,8 @@ interface WorkflowPageProps {
 const WorkflowPage: NextPage<WorkflowPageProps> = ({ workflow }) => {
 	return (
 		<>
+			<Seo title="Workflow" />
+
 			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
 				<div className="max-w-full md:max-w-5xl">
 					<h1
