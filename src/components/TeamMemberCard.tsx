@@ -25,6 +25,26 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ person }) => {
 					/>
 				</div>
 				<div className="mb-4 flex items-center justify-center gap-1">
+					{github && (
+						<a
+							className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+							href={github}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FiGithub size={20} />
+						</a>
+					)}
+					{linkedin && (
+						<a
+							className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
+							href={linkedin ? linkedin : '#'}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FiLinkedin size={20} />
+						</a>
+					)}
 					{facebook && (
 						<a
 							className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
@@ -43,26 +63,6 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ person }) => {
 							rel="noreferrer"
 						>
 							<FiTwitter size={20} />
-						</a>
-					)}
-					{linkedin && (
-						<a
-							className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
-							href={linkedin ? linkedin : '#'}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<FiLinkedin size={20} />
-						</a>
-					)}
-					{github && (
-						<a
-							className="flex justify-center rounded-full bg-dark-1 p-2 transition-all duration-300 ease-out hover:bg-blue focus:bg-blue"
-							href={github}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<FiGithub size={20} />
 						</a>
 					)}
 				</div>

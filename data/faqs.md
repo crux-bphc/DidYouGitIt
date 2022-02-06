@@ -21,4 +21,4 @@ No. Absolutely not. The event is for individual participants. You are happy to c
 
 ## Who is organising the event?
 
-The event is being jointly organized by cruX BPHC, ACM BPHC and DevSoc Goa. Projects are also contributed by SWD BPHC, SmartCampus BPHC and aeroD BPGC
+The event is being jointly organized by cruX BPHC, ACM BPHC BPHC and DevSoc Goa. Projects are also contributed by SWD BPHC, SmartCampus BPHC and aeroD BPGC

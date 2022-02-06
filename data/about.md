@@ -8,7 +8,7 @@ organizers:
       style: { height: 60, width: 160 },
     },
     {
-      name: 'CRUX BPHC',
+      name: 'cruX BPHC',
       image: '/assets/crux-white.png',
       style: { height: 68, width: 68 },
       alt: 'crux-bphc',
@@ -44,7 +44,7 @@ participants:
   ]
 ---
 
-Did You Git It? is a N-day Hackathon to promote open source
+Did You Git It? is a 10-day Hackathon to promote open source
 practices among both budding and experienced student developers. We
 aim to encourage enthusiastic minds to come up with innovative
 solutions to software problems. The Hackathon comprises of projects

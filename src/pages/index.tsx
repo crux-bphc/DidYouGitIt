@@ -26,12 +26,12 @@ const HomePage: NextPage = ({}) => {
 					</p>
 					<p>
 						Well, here's your chance to put that creative mindset to good use.
-						We, at ACM BPHC, bring you "Did You Git It?" - a N-day open source
+						We, at ACM BPHC, bring you "Did You Git It?" - a 10-day open source
 						event for developers just like you to model solutions to problems we
 						encounter in our daily lives.
 					</p>
 					<p>
-						Tune into XYZ-link on ABC-date for the event. Let's improve the
+						Tune into the <a href='https://didyougitit.netlify.app/'>Website</a> on Feb 14th, 2022 for the event. Let's improve the
 						development culture together, shall we?
 					</p>
 					<div className="my-10">

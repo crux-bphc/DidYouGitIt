@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
-import { FiTwitter, FiFacebook } from 'react-icons/fi';
+import { FiTwitter, FiFacebook, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import clsx from 'clsx';
 import {
 	HiOutlineHome,
@@ -130,12 +130,18 @@ const Sidebar: React.FC<SidebarProps> = ({
 						</NavLink>
 					</div>
 				</div>
-				<div className="flex gap-6 pb-5 lg:items-center">
-					<a href="#" aria-label="twitter-link" className="text-sm">
+				<div className="flex md:grid md:grid-cols-2 gap-6 pb-5 lg:items-center">
+					<a href="https://twitter.com/AcmBphc" aria-label="twitter-link" className="text-sm" target="_blank" rel="noreferrer">
 						<FiTwitter size={26} />
 					</a>
-					<a aria-label="facebook-link" className="text-sm" href="#">
+					<a href="https://www.facebook.com/pages/category/Software/ACM-BPHC-Chapter-650997138352022/" aria-label="facebook-link" className="text-sm" target="_blank" rel="noreferrer">
 						<FiFacebook size={26} />
+					</a>
+					<a href="https://in.linkedin.com/company/acm-bphc-chapter" aria-label="linkedin-link" className="text-sm" target="_blank" rel="noreferrer">
+						<FiLinkedin size={26} />
+					</a>
+					<a href="https://www.instagram.com/acm_bphc/" aria-label="instagram-link" className="text-sm" target="_blank" rel="noreferrer">
+						<FiInstagram size={26} />
 					</a>
 				</div>
 			</Component>
