@@ -18,18 +18,18 @@ teamData : {
 				github: 'https://github.com/Adithya2907',
 			},
 			{
-				coverPic: '/assets/profile_pics/anuradha-pandey.jpg',
-				name: 'Anuradha Pandey',
-				subtitle: 'ACM BPHC',
-				github: 'https://github.com/pandeyanuradha',
-			},
-			{
 				coverPic: '/assets/profile_pics/medini.jpg',
 				name: 'Medini N B',
 				subtitle: 'ACM BPHC',
 				github: 'https://github.com/imedusa',
 				linkedin: 'https://www.linkedin.com/in/medini-n-b-945338171/',
 				facebook: 'https://www.facebook.com/medini.nb'
+			},
+			{
+				coverPic: '/assets/profile_pics/anuradha-pandey.jpg',
+				name: 'Anuradha Pandey',
+				subtitle: 'ACM BPHC',
+				github: 'https://github.com/pandeyanuradha',
 			},
 		]
 	},
@@ -93,22 +93,17 @@ teamData : {
 				github: 'https://github.com/aomine2023',
 			},
 			{
-				coverPic: '/assets/profile_pics/tushar-chenan.jpg',
-				name: 'Tushar Brijesh Chenan',
-				subtitle: 'cruX',
-				github: 'https://github.com/rocka0',
-			},
-			{
 				coverPic: '/assets/profile_pics/aryan-chaubal.jpg',
 				name: 'Aryan Chaubal',
 				subtitle: 'cruX',
 				github: 'https://github.com/chaubss',
 			},
 			{
-				coverPic: '/assets/profile_pics/bhavesh-mishra.jpeg',
-				name: 'Bhavesh Misra',
-				subtitle: 'ACM BPHC',
-				github: 'https://github.com/Zekrom-7780',
+				coverPic: '/assets/profile_pics/chinmay-s-dalal.jpg',
+				name: 'Chinmay Dalal',
+				subtitle: 'cruX',
+				github: 'https://github.com/p00f',
+				facebook: 'https://www.facebook.com/profile.php?id=100056866492906'
 			},
 		]
 	},
@@ -166,11 +161,10 @@ teamData : {
 				linkedin: 'https://www.linkedin.com/in/sahil-sudesh-79308b200?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BytQR6QtbTei1DP8FrcuUVA%3D%3D',
 			},
 			{
-				coverPic: '/assets/profile_pics/chinmay-s-dalal.jpg',
-				name: 'Chinmay Dalal',
+				coverPic: '/assets/profile_pics/tushar-chenan.jpg',
+				name: 'Tushar Brijesh Chenan',
 				subtitle: 'cruX',
-				github: 'https://github.com/p00f',
-				facebook: 'https://www.facebook.com/profile.php?id=100056866492906'
+				github: 'https://github.com/rocka0',
 			},
 		]
 	},

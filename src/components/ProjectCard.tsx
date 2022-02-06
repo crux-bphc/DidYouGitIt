@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 			<div className="mb-10 flex flex-col border-[1px] border-gray p-6 transition-all duration-300 ease-out hover:border-white hover:shadow-md hover:shadow-white md:min-h-[540px]">
 				<div className="mb-20 flex items-center justify-between">
 					<p className="text-lg">
-						{`${index}`.length === 1 ? `0${index + 1}` : index + 1}
+						{(index+1).toString().length == 1 ? '0' + (index + 1): (index + 1)}
 					</p>
 					<div>
 						<Image
