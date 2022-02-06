@@ -7,11 +7,7 @@ interface DateBubbleProps {
 	size?: 'md' | 'sm';
 }
 
-const DateBubble: React.FC<DateBubbleProps> = ({
-	date,
-	year,
-	size = 'md',
-}) => {
+const DateBubble: React.FC<DateBubbleProps> = ({ date, year, size = 'md' }) => {
 	return (
 		<>
 			<div

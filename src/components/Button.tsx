@@ -35,6 +35,7 @@ const Button: React.FC<ButtonProps> = ({
 			<Link href={href} passHref>
 				<Component
 					target={isExternal ? '_blank' : undefined}
+					rel={isExternal ? 'noreferrer' : undefined}
 					className={clsx([
 						'rounded-sm border-2 transition-all duration-300 ease-out hover:opacity-80',
 						sizes[size],

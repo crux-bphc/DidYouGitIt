@@ -26,10 +26,10 @@ const ScheduleItem: React.FC<ScheduleItemProps> = ({
 			>
 				<div className="order-1 hidden md:block lg:w-1/3"></div>
 				<div className="z-20 order-1 hidden items-center justify-center md:flex lg:w-1/3">
-					<DateBubble date={date} year={year}/>
+					<DateBubble date={date} year={year} />
 				</div>
 				<div className="order-1 lg:w-1/3">
-					<EventCard title={title} date={date} year={year}/>
+					<EventCard title={title} date={date} year={year} />
 				</div>
 			</div>
 		</>

@@ -14,6 +14,11 @@ export type Workflow = {
 };
 
 export type Team = {
+	title: string;
+	team: Person[];
+};
+
+export type Person = {
 	name: string;
 	subtitle: string;
 	coverPic: string;

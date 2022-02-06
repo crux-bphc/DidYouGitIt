@@ -10,7 +10,7 @@ interface SchedulePageProps {
 	schedule: Schedule[];
 }
 
-const SchedulePage: NextPage<SchedulePageProps> = ({schedule}) => {
+const SchedulePage: NextPage<SchedulePageProps> = ({ schedule }) => {
 	return (
 		<>
 			<h1 className="mb-10 text-center text-[40px]  font-extrabold">
@@ -19,7 +19,6 @@ const SchedulePage: NextPage<SchedulePageProps> = ({schedule}) => {
 
 			<div className="bg-gray-200 mx-auto h-full lg:container lg:w-5/6">
 				<div className="wrap relative h-full overflow-hidden py-10 px-4 lg:p-10">
-
 					{schedule.map((curr, i) => {
 						curr.orientation = i % 2 === 0 ? 'left' : 'right';
 
@@ -34,7 +33,7 @@ const SchedulePage: NextPage<SchedulePageProps> = ({schedule}) => {
 							</div>
 						);
 					})}
-					
+
 					{/* <ScheduleItem />
 					<ScheduleItem orientation="left" />
 					<ScheduleItem />
@@ -49,7 +48,6 @@ const SchedulePage: NextPage<SchedulePageProps> = ({schedule}) => {
 				
 					<ScheduleItem />
 					<ScheduleItem orientation="left" /> */}
-					
 				</div>
 			</div>
 		</>
