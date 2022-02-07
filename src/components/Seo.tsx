@@ -8,22 +8,26 @@ interface SeoProps {
 }
 
 const Seo: React.FC<SeoProps> = ({
-	title = 'Open Source Event',
+	title,
 	children,
 	description = 'Open source event for developers just like you to model solutions to problems we encounter in our daily lives.',
 }) => {
 	const router = useRouter();
 
+	const fullTitle = `Did You Git It ? | Open Source Event ${
+		title ? `| ${title}` : ''
+	}`.trim();
+
 	return (
 		<>
 			<Head>
-				<title>Did You Git It ? || {title} </title>
+				<title>{fullTitle}</title>
 				<meta name="description" content={description} />
 				<link
 					rel="canonical"
 					href={`${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`}
 				/>
-				<meta property="og:title" content={title} />
+				<meta property="og:title" content={fullTitle} />
 				<meta property="og:description" content={description} />
 				<meta property="og:type" content={'website'} />
 				<meta property="og:url" content={process.env.NEXT_PUBLIC_SITE_URL} />
@@ -31,6 +35,9 @@ const Seo: React.FC<SeoProps> = ({
 					property="og:image"
 					content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`}
 				/>
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:title" content={fullTitle} />
+				<meta name="twitter:description" content={description} />
 				{children}
 			</Head>
 		</>
