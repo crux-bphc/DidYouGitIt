@@ -14,6 +14,7 @@ import Divider from '../Divider';
 import { motion, MotionProps } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import SidebarIconLink from './SidebarIconLink';
 
 interface SidebarProps extends MotionProps {
 	className?: string;
@@ -130,19 +131,30 @@ const Sidebar: React.FC<SidebarProps> = ({
 						</NavLink>
 					</div>
 				</div>
-				<div className="flex md:grid md:grid-cols-2 gap-6 pb-5 lg:items-center">
-					<a href="https://twitter.com/AcmBphc" aria-label="twitter-link" className="text-sm" target="_blank" rel="noreferrer">
-						<FiTwitter size={26} />
-					</a>
-					<a href="https://www.facebook.com/pages/category/Software/ACM-BPHC-Chapter-650997138352022/" aria-label="facebook-link" className="text-sm" target="_blank" rel="noreferrer">
-						<FiFacebook size={26} />
-					</a>
-					<a href="https://in.linkedin.com/company/acm-bphc-chapter" aria-label="linkedin-link" className="text-sm" target="_blank" rel="noreferrer">
-						<FiLinkedin size={26} />
-					</a>
-					<a href="https://www.instagram.com/acm_bphc/" aria-label="instagram-link" className="text-sm" target="_blank" rel="noreferrer">
-						<FiInstagram size={26} />
-					</a>
+				<div className="flex gap-6 pb-5 md:grid md:grid-cols-2 lg:items-center">
+					<SidebarIconLink
+						href="https://twitter.com/AcmBphc"
+						label="twitter-link"
+						icon={<FiTwitter size={26} />}
+					/>
+
+					<SidebarIconLink
+						href="https://www.facebook.com/pages/category/Software/ACM-BPHC-Chapter-650997138352022/"
+						label="facebook-link"
+						icon={<FiFacebook size={26} />}
+					/>
+
+					<SidebarIconLink
+						href="https://in.linkedin.com/company/acm-bphc-chapter"
+						label="linkedin-link"
+						icon={<FiLinkedin size={26} />}
+					/>
+
+					<SidebarIconLink
+						href="https://www.instagram.com/acm_bphc/"
+						label="instagram-link"
+						icon={<FiInstagram size={26} />}
+					/>
 				</div>
 			</Component>
 		</>
