@@ -4,9 +4,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { Workflow } from '../types';
-import WorkflowCard from '../components/WorkflowCard';
 import clsx from 'clsx';
 import Seo from '../components/Seo';
+import dynamic from 'next/dynamic';
+
+const WorkflowCard = dynamic(() => import('../components/WorkflowCard'));
 
 interface WorkflowPageProps {
 	workflow: Workflow[];

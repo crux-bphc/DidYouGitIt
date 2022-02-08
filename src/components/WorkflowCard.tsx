@@ -1,6 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
-import * as Icons from 'react-icons/fa';
+import {
+	FaBookmark,
+	FaCheck,
+	FaRegistered,
+	FaSortAmountUpAlt,
+	FaThumbsUp,
+} from 'react-icons/fa';
 
 interface WorkflowCardProps {
 	title: string;
@@ -9,13 +15,21 @@ interface WorkflowCardProps {
 	icon: string;
 }
 
+const icons = {
+	FaRegistered,
+	FaThumbsUp,
+	FaCheck,
+	FaBookmark,
+	FaSortAmountUpAlt,
+};
+
 const WorkflowCard: React.FC<WorkflowCardProps> = ({
 	title,
 	desc,
 	orientation,
 	icon,
 }) => {
-	const IconComponent = Icons[icon];
+	const IconComponent = icons[icon];
 	return (
 		<>
 			<div

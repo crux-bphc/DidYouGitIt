@@ -1,6 +1,5 @@
 import matter from 'gray-matter';
 import { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
 import path from 'path';
 import React from 'react';
 import fs from 'fs';

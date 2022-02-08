@@ -3,13 +3,14 @@ import React from 'react';
 import Button from '../components/Button';
 import CountdownCard from '../components/CountdownCard';
 import Seo from '../components/Seo';
+import { TimeCalc } from '../utils/timeCalc';
 
 const HomePage: NextPage = ({}) => {
 	const [timeLeft, setTimeLeft] = React.useState(TimeCalc()) as any;
 
 	React.useEffect(() => {
 		const timer = setTimeout(() => {
-		  setTimeLeft(TimeCalc);
+			setTimeLeft(TimeCalc);
 		}, 1000);
 
 		return () => clearTimeout(timer);
@@ -20,10 +21,10 @@ const HomePage: NextPage = ({}) => {
 			<Seo />
 			<div className="mt-10 p-4 md:px-10 lg:mt-0 lg:pl-36">
 				<div className="flex items-center justify-start gap-2 md:gap-5">
-					<CountdownCard unit='days' value={timeLeft.days} />
-					<CountdownCard unit='hours' value={timeLeft.hours} />
-					<CountdownCard unit='minutes' value={timeLeft.minutes} />
-					<CountdownCard unit='seconds' value={timeLeft.seconds} />
+					<CountdownCard unit="days" value={timeLeft.days} />
+					<CountdownCard unit="hours" value={timeLeft.hours} />
+					<CountdownCard unit="minutes" value={timeLeft.minutes} />
+					<CountdownCard unit="seconds" value={timeLeft.seconds} />
 				</div>
 				<div className="prose prose-invert max-w-full prose-p:text-gray md:max-w-5xl">
 					<h1 className="mt-8 mb-3 text-4xl font-bold sm:text-5xl md:text-[50px] lg:mb-7 lg:text-[60px] xl:text-[80px]">
@@ -41,8 +42,9 @@ const HomePage: NextPage = ({}) => {
 						encounter in our daily lives.
 					</p>
 					<p>
-						Tune into the <a href='https://didyougitit.netlify.app/'>Website</a> on Feb 14th, 2022 for the event. Let's improve the
-						development culture together, shall we?
+						Tune into the <a href={process.env.NEXT_PUBLIC_SITE_URL}>Website</a>{' '}
+						on Feb 14th, 2022 for the event. Let's improve the development
+						culture together, shall we?
 					</p>
 					<div className="my-10">
 						<Button href="/workflow">Learn More</Button>
@@ -51,30 +53,6 @@ const HomePage: NextPage = ({}) => {
 			</div>
 		</>
 	);
-};
-
-export const TimeCalc = () => {
-	const difference = new Date("2022-02-14").getTime() - new Date().getTime();
-	let timeLeft = {};
-
-	if (difference > 0) {
-		timeLeft = {
-			days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-			hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-			minutes: Math.floor((difference / 1000 / 60) % 60),
-			seconds: Math.floor((difference / 1000) % 60)
-		};
-	}
-	else{
-		timeLeft = {
-			days: 0,
-			hours: 0,
-			minutes: 0,
-			seconds: 0
-		};
-	}
-
-  	return timeLeft;
 };
 
 export default HomePage;
