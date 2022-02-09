@@ -30,10 +30,13 @@ const Seo: React.FC<SeoProps> = ({
 				<meta property="og:title" content={fullTitle} />
 				<meta property="og:description" content={description} />
 				<meta property="og:type" content={'website'} />
-				<meta property="og:url" content={process.env.NEXT_PUBLIC_SITE_URL} />
+				<meta
+					property="og:url"
+					content={`${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`}
+				/>
 				<meta
 					property="og:image"
-					content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`}
+					content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`}
 				/>
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:title" content={fullTitle} />
