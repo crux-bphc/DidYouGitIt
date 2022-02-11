@@ -37,7 +37,7 @@ const HomePage: NextPage = ({}) => {
 					</p>
 					<p>
 						Well, here's your chance to put that creative mindset to good use.
-						We, at ACM BPHC, bring you "Did You Git It?" - a 10-day open source
+						We, at cruX and ACM BPHC, bring you "Did You Git It?" - a 10-day open source
 						event for developers just like you to model solutions to problems we
 						encounter in our daily lives.
 					</p>

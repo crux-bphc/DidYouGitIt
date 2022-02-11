@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 					<div className="flex items-center gap-x-3">
 						<Button
 							className="md:hidden"
-							href="https://discord.gg/E4Cb78Rz"
+							href="https://discord.gg/bBMYhPFT"
 							isExternal
 						>
 							<FaDiscord size={20} />
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ onOpen }) => {
 							variant="white"
 							isExternal
 							className="hidden md:block"
-							href="https://discord.gg/E4Cb78Rz"
+							href="https://discord.gg/bBMYhPFT"
 						>
 							Join Discord
 						</Button>
