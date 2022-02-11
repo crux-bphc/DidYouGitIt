@@ -11,10 +11,10 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 	return (
 		<>
-			<div className="mb-10 flex flex-col border-[1px] border-gray p-6 transition-all duration-300 ease-out hover:border-white hover:shadow-md hover:shadow-white md:min-h-[540px]">
+			<div className="mb-10 flex flex-col border-[1px] border-gray p-6 transition-all duration-300 ease-out hover:border-white hover:shadow-md hover:shadow-white md:min-h-[550px]">
 				<div className="mb-20 flex items-center justify-between">
 					<p className="text-lg">
-						{(index+1).toString().length == 1 ? '0' + (index + 1): (index + 1)}
+						{(index + 1).toString().length == 1 ? '0' + (index + 1) : index + 1}
 					</p>
 					<div>
 						<Image
@@ -27,10 +27,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 				</div>
 				<div className="flex flex-1 flex-col justify-between">
 					<div>
-						<h5 className="mb-3 max-w-[78%] text-3xl font-medium uppercase">
-							{project.title}
-						</h5>
-						<h6 className="mb-10 uppercase text-blue">{project.domain}</h6>
+						<div className="min-h-[150px]">
+							<h5 className="mb-3 max-w-[78%] text-3xl font-medium uppercase">
+								{project.title}
+							</h5>
+							<h6 className="mb-10 uppercase text-blue">
+								{project.domain.map((domain, i) => (
+									<div key={i}>{domain}</div>
+								))}
+							</h6>
+						</div>
+
 						<p className="lh-15 mb-5 pb-5 text-sm text-gray">
 							{project.description}
 						</p>

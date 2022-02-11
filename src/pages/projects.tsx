@@ -31,11 +31,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 
 	React.useEffect(() => {
 		if (domains.length > 0) {
-			const newData = projects.filter((project, i) =>
-				domains.includes(project.domain.toLowerCase())
+			const filtered = projects.filter((p) =>
+				p.domain.some((d) => domains.includes(d))
 			);
 
-			setData(newData);
+			setData(filtered);
 		} else {
 			setData(projects);
 		}
@@ -138,29 +138,29 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projects }) => {
 									</FilterItem>
 
 									<FilterItem
-										onClick={() => handleDomain('web development')}
-										isActive={domains.includes('web development')}
+										onClick={() => handleDomain('Web Development')}
+										isActive={domains.includes('Web Development')}
 									>
 										Web Development
 									</FilterItem>
 
 									<FilterItem
-										onClick={() => handleDomain('android development')}
-										isActive={domains.includes('android development')}
+										onClick={() => handleDomain('Android Development')}
+										isActive={domains.includes('Android Development')}
 									>
 										Android Development
 									</FilterItem>
 
 									<FilterItem
-										onClick={() => handleDomain('ios development')}
-										isActive={domains.includes('ios development')}
+										onClick={() => handleDomain('iOS Development')}
+										isActive={domains.includes('iOS Development')}
 									>
 										iOS Development
 									</FilterItem>
 
 									<FilterItem
-										onClick={() => handleDomain('machine learning')}
-										isActive={domains.includes('machine learning')}
+										onClick={() => handleDomain('Machine Learning')}
+										isActive={domains.includes('Machine Learning')}
 									>
 										Machine Learning
 									</FilterItem>

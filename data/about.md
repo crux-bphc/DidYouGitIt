@@ -2,22 +2,16 @@
 organizers:
   [
     {
-      name: 'ACM BPHC',
-      image: '/assets/acm.png',
-      alt: 'acm-bphc',
-      style: { height: 60, width: 160 },
-    },
-    {
       name: 'cruX BPHC',
       image: '/assets/crux-white.png',
       style: { height: 68, width: 68 },
       alt: 'crux-bphc',
     },
     {
-      name: 'DevSoc BPGC',
-      image: '/assets/devsoc-white.png',
-      style: { height: 70, width: 70 },
-      alt: 'devsoc-bpgc',
+      name: 'ACM BPHC',
+      image: '/assets/acm.png',
+      alt: 'acm-bphc',
+      style: { height: 60, width: 160 },
     },
   ]
 
@@ -34,12 +28,6 @@ participants:
       image: '/assets/swd-white.png',
       style: { height: 70, width: 70 },
       alt: 'swd-bphc',
-    },
-    {
-      name: 'Aero D',
-      image: '/assets/aero-white.png',
-      style: { height: 70, width: 70 },
-      alt: 'aero',
     },
   ]
 ---

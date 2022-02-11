@@ -1,5 +1,5 @@
 export const TimeCalc = () => {
-	const difference = new Date('2022-02-14').getTime() - new Date().getTime();
+	const difference = new Date('2022-02-16').getTime() - new Date().getTime();
 	let timeLeft = {};
 
 	if (difference > 0) {
