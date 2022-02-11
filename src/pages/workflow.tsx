@@ -23,7 +23,7 @@ const WorkflowPage: NextPage<WorkflowPageProps> = ({ workflow }) => {
 				<div className="max-w-full md:max-w-5xl">
 					<h1
 						style={{ lineHeight: 1.1 }}
-						className="mb-10 text-3xl font-bold sm:text-5xl md:mb-4 md:text-[30px] lg:mb-8 lg:text-[40px] xl:text-[60px]"
+						className="mb-10 text-center text-3xl font-bold sm:text-5xl md:mb-4 md:text-left md:text-[30px] lg:mb-8 lg:text-[40px] xl:text-[60px]"
 					>
 						How does 'Did you Git it?' work
 					</h1>

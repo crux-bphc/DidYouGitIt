@@ -42,16 +42,18 @@ const WorkflowCard: React.FC<WorkflowCardProps> = ({
 			>
 				<div
 					className={clsx([
-						'col-span-1 row-span-2 grid place-items-center',
+						'col-span-1 row-span-2 mt-7 flex justify-center ',
 						orientation === 'right' && 'order-2',
 					])}
 				>
-					<IconComponent size={20} />
+					<IconComponent size={24} />
 				</div>
 				<div
 					className={clsx(['col-span-6', orientation === 'right' && 'order-1'])}
 				>
-					<h1 className="mt-6 mb-3 text-[20px] font-bold uppercase">{title}</h1>
+					<h1 className="mt-6 mb-3 text-[20px] font-bold uppercase text-blue">
+						{title}
+					</h1>
 					<p className="wrap mb-3 text-sm text-gray">{desc}</p>
 				</div>
 			</div>

@@ -43,7 +43,7 @@ const HomePage: NextPage = ({}) => {
 					</p>
 					<p>
 						Tune into the <a href={process.env.NEXT_PUBLIC_SITE_URL}>Website</a>{' '}
-						on Feb 14th, 2022 for the event. Let's improve the development
+						on Feb 16th, 2022 for the event. Let's improve the development
 						culture together, shall we?
 					</p>
 					<div className="my-10">

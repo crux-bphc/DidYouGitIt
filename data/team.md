@@ -12,12 +12,6 @@ teamData : {
 				facebook: 'https://www.facebook.com/sidharth.anand.1029',
 			},
 			{
-				coverPic: '/assets/profile_pics/adithya.jpg',
-				name: 'Adithya',
-				subtitle: 'DevSoc',
-				github: 'https://github.com/Adithya2907',
-			},
-			{
 				coverPic: '/assets/profile_pics/medini.jpg',
 				name: 'Medini N B',
 				subtitle: 'ACM BPHC',
@@ -53,12 +47,6 @@ teamData : {
 				twitter: 'https://twitter.com/ashishavs7'
 			},
 			{
-				coverPic: '/assets/profile_pics/adithya.jpg',
-				name: 'Adithya',
-				subtitle: 'DevSoc',
-				github: 'https://github.com/Adithya2907',
-			},
-			{
 				coverPic: '/assets/profile_pics/aryan-arora.jpg',
 				name: 'Aryan Arora',
 				subtitle: 'cruX, SWD',
@@ -85,12 +73,6 @@ teamData : {
 				github: 'https://github.com/sreekarnv',
 				facebook: 'https://www.facebook.com/NV.sreekar/',
 				linkedin: 'https://www.linkedin.com/in/sreekar-venkata-nutulapati-63672120a/'
-			},
-			{
-				coverPic: '/assets/profile_pics/avinab-neogy.jpg',
-				name: 'Avinab Neogy',
-				subtitle: 'AeroD',
-				github: 'https://github.com/aomine2023',
 			},
 			{
 				coverPic: '/assets/profile_pics/aryan-chaubal.jpg',
@@ -141,24 +123,10 @@ teamData : {
 				twitter: 'https://twitter.com/ashishavs7'
 			},
 			{
-				coverPic: '/assets/profile_pics/ishan-neogi.jpeg',
-				name: 'Ishan Neogi',
-				subtitle: 'AeroD',
-				github: 'https://github.com/IshanNeogi',
-				linkedin: 'https://www.linkedin.com/in/ishan-neogi-5794281a9/',
-			},
-			{
 				coverPic: '/assets/profile_pics/aryan-arora.jpg',
 				name: 'Aryan Arora',
 				subtitle: 'cruX, SWD',
 				github: 'https://github.com/aryanarora180',
-			},
-			{
-				coverPic: '/assets/profile_pics/sahil-sudesh.jpg',
-				name: 'Sahil Sudesh',
-				subtitle: 'AeroD',
-				github: 'https://github.com/God-SammY-lord',
-				linkedin: 'https://www.linkedin.com/in/sahil-sudesh-79308b200?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BytQR6QtbTei1DP8FrcuUVA%3D%3D',
 			},
 			{
 				coverPic: '/assets/profile_pics/tushar-chenan.jpg',
@@ -192,12 +160,6 @@ teamData : {
 				name: 'Animish Prateek',
 				subtitle: 'ACM BPHC',
 				github: 'https://github.com/Animish01',
-			},
-			{
-				coverPic: '/assets/profile_pics/rishil-shah.jpeg',
-				name: 'Rishil Shah',
-				subtitle: 'DevSoc',
-				github: 'https://github.com/bacSlash',
 			},
 		]
 	},
