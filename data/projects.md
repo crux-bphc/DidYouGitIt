@@ -14,13 +14,6 @@ projects: [
 			logo: '/assets/swd.png',
 		},
 		{
-			title: 'SmartCampus Mobile App',
-			domain: ['Android Development'],
-			description: 'A system to enable cashless payment throughout campus in any case and scenario, be in via mess balance or UPI payments for BPHC.',
-			link: 'https://github.com/smart-campus-team/smartcampus-mobile',
-			logo: '/assets/smartcampus.png',
-		},
-		{
 			title: 'Chrono Factorem',
 			domain: ['Web Development'],
 			description: 'A MERN stack Web App that allows students to create draft time tables',
@@ -61,6 +54,13 @@ projects: [
 			description: 'Identifies unique faces from corpus of photos and allows a person to retrieve all images containing their face. Clustering of images is done on server side by using facial feature embeddings, and client facing portal is made in React.js.',
 			link: 'https://github.com/crux-bphc/batchsnap-sorter',
 			logo: '/assets/crux.png',
+		},
+		{
+			title: 'SmartCampus Mobile App',
+			domain: ['Android Development'],
+			description: 'A system to enable cashless payment throughout campus in any case and scenario, be in via mess balance or UPI payments for BPHC.',
+			link: 'https://github.com/smart-campus-team/smartcampus-mobile',
+			logo: '/assets/smartcampus.png',
 		}
 	]
 ---

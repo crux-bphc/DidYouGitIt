@@ -42,6 +42,9 @@ const HomePage: NextPage = ({}) => {
 						encounter in our daily lives.
 					</p>
 					<p>
+						Exciting prizes to be won, including prize money upto <span className='text-blue font-bold'>10k</span> and exclusive <span className='text-blue font-bold'>merch</span>!
+					</p>
+					<p>
 						Tune into the <a href={process.env.NEXT_PUBLIC_SITE_URL}>Website</a>{' '}
 						on Feb 16th, 2022 for the event. Let's improve the development
 						culture together, shall we?
