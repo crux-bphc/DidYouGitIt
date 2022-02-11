@@ -38,6 +38,10 @@ const Seo: React.FC<SeoProps> = ({
 					property="og:image"
 					content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`}
 				/>
+				<meta
+					property="og:image:secure_url"
+					content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`}
+				/>
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:title" content={fullTitle} />
 				<meta name="twitter:description" content={description} />
