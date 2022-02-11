@@ -32,7 +32,7 @@ participants:
   ]
 ---
 
-Did You Git It? is a 25-day Hackathon to promote open source
+Did You Git It? is a 21-day Hackathon to promote open source
 practices among both budding and experienced student developers. We
 aim to encourage enthusiastic minds to come up with innovative
 solutions to software problems. The Hackathon comprises of projects
