@@ -86,7 +86,7 @@ teamData : {
 				subtitle: 'cruX',
 				github: 'https://github.com/p00f',
 				facebook: 'https://www.facebook.com/profile.php?id=100056866492906'
-			},
+			}
 		]
 	},
 	tech: {
@@ -254,8 +254,30 @@ teamData : {
 				name: 'Dharmesh Varshney',
 				subtitle: 'ACM BPHC',
 				github: 'https://github.com/dharmesh0103',
-				facebook: 'https://www.facebook.com/profile.php?id=100004187414641'
+				facebook: 'https://www.facebook.com/profile.php?id=100004187414641',
 			},
+			{
+				coverPic: '/assets/profile_pics/bhavesh-misra.jpg',
+				name: 'Bhavesh Misra',
+				subtitle: 'ACM BPHC',
+				github: 'https://github.com/Zekrom-7780',
+			},
+			{
+				coverPic: '/assets/profile_pics/dhaval-maniar.jpg',
+				name: 'Dhaval Maniar',
+				subtitle: 'ACM BPHC',
+				github: 'https://github.com/dhavalmaniar05',
+				facebook: 'https://www.facebook.com/dhaval.maniar.904/',
+				linkedin: 'https://www.linkedin.com/in/dhaval-maniar-9a88a5151/'
+			},
+			{
+				coverPic: '/assets/profile_pics/parth-kadhane.jpg',
+				name: 'Parth Kadhane',
+				subtitle: 'ACM BPHC',
+				github: 'https://github.com/ParthTl1',
+				facebook: 'https://www.facebook.com/parth.kadhane/',
+				linkedin: 'https://www.linkedin.com/in/parth-kadhane-115ab321a/',
+			}
 		]
 	}
 }
